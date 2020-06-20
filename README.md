@@ -16,11 +16,17 @@ npm install -g gatsby-cli
 
 ### How to start
 
+```sh
+   $ git clone https://github.com/Xidrovo/profesource-front.git
+   $ cd/profesource-front
+   $ yarn install
+   $ yarn start
+``` 
+ ### if something bad happens in the last command, use: 
+ ```sh 
+    $ gatsby develop
 ```
-    git clone https://github.com/Xidrovo/profesource-front.git
-    yarn install
-    yarn start
-```
+Now you are ready to go!
 
 [node.js]: http://nodejs.org
 [yarn]: https://yarnpkg.com/
