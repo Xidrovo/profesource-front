@@ -5,8 +5,8 @@ Desarrollo front-end para el servicio de profesource. Descripción más detallad
 ### Pre requisitos
 
 Tener instalado
-_ [node.js] - evented I/O for the backend
-_ [yarn]
+[node.js] - evented I/O for the backend
+[yarn]
   
 el proyecto correrá con Gatsby, es posible que necesiten instalar esa dependencia a nivel de computadora, pueden hacerlo con el siguiente comando
 
@@ -21,6 +21,12 @@ npm install -g gatsby-cli
     yarn install
     yarn start
 ```
+
+### Adicionales
+
+##### Insertar nuevo alias
+
+`alias` es conocido como un tipo de `shortcut` hacia un directorio. Actualmente existe el ejemplo con
 
 [node.js]: http://nodejs.org
 [yarn]: https://yarnpkg.com/

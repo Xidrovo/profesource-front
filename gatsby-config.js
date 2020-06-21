@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Profesource`,
+    description: `Some nice descripctin here please`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -42,6 +42,7 @@ module.exports = {
       options: {
         alias: {
           '@components': 'src/components',
+          '@Icons': 'src/Icons',
         },
         extensions: ['js'],
       },
