@@ -3,9 +3,10 @@ import { Link } from 'gatsby'
 
 import SEO from '../components/seo'
 import AlertIcon from '@Icons/AlertIcon'
+import Layout from '@components/Layout'
 
 const SecondPage = () => (
-  <div>
+  <Layout title="Page-2">
     <SEO title="Page two" />
     <div className="p-24">
       <div className="text-center text-3xl font-semibold">
@@ -46,7 +47,7 @@ const SecondPage = () => (
         </Link>
       </div>
     </div>
-  </div>
+  </Layout>
 )
 
 export default SecondPage
