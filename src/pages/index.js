@@ -31,7 +31,7 @@ const IndexPage = () => {
           <div className="text-lg text-center items-center px-4">
             {escrito && (
               <div className="whitespace-pre-wrap">
-                Lo que estás escribiendo está aquí {escrito}
+                Lo que estás escribiendo está acá {escrito}
               </div>
             )}
           </div>
