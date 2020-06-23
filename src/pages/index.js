@@ -39,7 +39,11 @@ const IndexPage = () => {
               )}
             </div>
             <div className="text-blue-800 hover:text-blue-400 text-xl text-center">
+<<<<<<< HEAD
               <Link to="/page-2/">Go to page two</Link>
+=======
+              <Link to="/page-2/">Go to page 2</Link>
+>>>>>>> 45b9370... Colocando el template
             </div>
           </div>
         </div>
