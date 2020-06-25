@@ -19,7 +19,7 @@ const IndexPage = () => {
       <SEO title="Home" />
 
       <Layout title="Dashboard">
-      <div class="float-right w-64">
+      <div class="float-right w-64 flex column hidden md:block">
         <Message></Message>
         <p class="h-6"></p>
         <Subject_List></Subject_List>

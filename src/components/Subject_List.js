@@ -1,4 +1,5 @@
 import React from 'react';
+import AssignmentIcon from '@Icons/AssignmentIcon';
 
 class Subject_List extends React.Component{
     render(){
@@ -12,15 +13,23 @@ class Subject_List extends React.Component{
                 <h2 class="p-3 text-white bg-gray-800 text-justify">Materias</h2>
                 <div class="p-3">
                 <table>
+                    <tbody>
                     {materias.nombre.map((materia,i) => {
                         return(
-                            <tr>
-                                <th class="text-left">{materia}</th>
-                                <th>{materias.cantidad[i]}</th>
-                            </tr>
+                                <tr>
+                                    <td class="w-1/12"><AssignmentIcon
+                                    lassName="fill-current my-auto h-6 w-6"
+                                    color={'#ffd700'}
+                                    width="20px"
+                                    height="20px"/></td>
+                                    <td class="text-left w-1/2">{materia}</td>
+                                    <td class="text-left w-1/5
+                                    ">{materias.cantidad[i]}</td>
+                                </tr>
                         );
                     })
                     }
+                    </tbody>
                 </table>
                 </div>
             </div>
