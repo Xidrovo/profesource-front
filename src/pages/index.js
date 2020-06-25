@@ -22,7 +22,7 @@ const IndexPage = () => {
       <SEO title="Home" />
 
       <Layout title="Dashboard">
-      <div class="float-right w-64 flex column hidden md:block">
+      <div class="float-right w-64 column hidden md:block">
         <Message></Message>
         <p class="h-6"></p>
         <Subject_List></Subject_List>
@@ -32,7 +32,17 @@ const IndexPage = () => {
             <div className="text-center">
               This is the profesource main page c:
             </div>
-            <Post  />
+            {/* Post recibe como props username, time (hora de publicacion), el title del post!
+                favs como numero de likes, comments como numero de coments y tag como la etiqueta del post
+             */}
+            <Post 
+            username="Carlos Carvajal"
+            time="20" 
+            title = "Mi Primer Post en ProfeSource!"
+            favs = "10"
+            comments = "5"
+            tag = "Dawm"
+            />
             <div className=" text-lg flex justify-around">
               <div className="my-auto">Here is an input text: </div>
               <input
