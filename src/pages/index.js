@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '@components/Layout'
+import Post from '@components/Post'
 
 const IndexPage = () => {
   const [escrito, setEscrito] = useState('')
@@ -23,6 +24,7 @@ const IndexPage = () => {
             <div className="text-center">
               This is the profesource main page c:
             </div>
+            <Post  />
             <div className=" text-lg flex justify-around">
               <div className="my-auto">Here is an input text: </div>
               <input
@@ -39,11 +41,8 @@ const IndexPage = () => {
               )}
             </div>
             <div className="text-blue-800 hover:text-blue-400 text-xl text-center">
-<<<<<<< HEAD
-              <Link to="/page-2/">Go to page two</Link>
-=======
+
               <Link to="/page-2/">Go to page 2</Link>
->>>>>>> 45b9370... Colocando el template
             </div>
           </div>
         </div>
