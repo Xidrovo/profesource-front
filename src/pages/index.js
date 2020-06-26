@@ -6,6 +6,8 @@ import Message from '../components/Message'
 import SEO from '../components/seo'
 import Layout from '@components/Layout'
 import Post from '@components/Post'
+import Share from '@components/Share'
+import Popular from '../components/Popular'
 
 
 const IndexPage = () => {
@@ -35,7 +37,10 @@ const IndexPage = () => {
             {/* Post recibe como props username, time (hora de publicacion), el title del post!
                 favs como numero de likes, comments como numero de coments y tag como la etiqueta del post
              */}
-            
+            <Popular></Popular>
+            <Share
+              tag ="Materia?"
+            />
             <Post 
             username="Carlos Carvajal"
             time="20" 
