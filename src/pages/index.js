@@ -35,6 +35,7 @@ const IndexPage = () => {
             {/* Post recibe como props username, time (hora de publicacion), el title del post!
                 favs como numero de likes, comments como numero de coments y tag como la etiqueta del post
              */}
+            
             <Post 
             username="Carlos Carvajal"
             time="20" 
