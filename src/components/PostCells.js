@@ -18,7 +18,7 @@ function PostCells(props) {
       <div className="space-x-4 mx-5 my-6 bg-transparent items-center">
         <div className="inline">
           <a className="user-link" href="#index.html">
-            <h4 className="inline-flex  text-blue-102 font-bold ">@{props.username} </h4>
+            <h4 className="inline-flex text-blue-102 font-bold ">@{props.username} </h4>
           </a>
 
         </div>
