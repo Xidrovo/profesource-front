@@ -1,7 +1,6 @@
 import React from 'react';
 
-class Message extends React.Component{
-    render(){
+const Message = () =>{
         return (
             <div className="rounded-lg border-4 border-opacity-50 border-gray-800">
                 <div>
@@ -11,6 +10,5 @@ class Message extends React.Component{
             </div>
         );
     }
-}
 
 export default Message;

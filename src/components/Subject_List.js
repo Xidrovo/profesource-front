@@ -1,8 +1,7 @@
 import React from 'react';
 import AssignmentIcon from '@Icons/AssignmentIcon';
 
-class Subject_List extends React.Component{
-    render(){
+const Subject_List = () =>{
         let materias={
             nombre: ['Quimica','Cálculo I','Física III','Comunicación'],
             cantidad: ['324','309','259','103']
@@ -35,6 +34,5 @@ class Subject_List extends React.Component{
             </div>
         );
     }
-}
 
 export default Subject_List;
