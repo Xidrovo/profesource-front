@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 import Layout from '@components/Layout'
 import PostCells from '@components/PostCells'
 import Post from '@components/Post'
-import Popular from '@components/Popular'
+import Popular from '@components/PopularPost'
 
 
 const IndexPage = () => {
