@@ -30,7 +30,7 @@ const IndexPage = () => {
         <Subject_List></Subject_List>
       </div>
         <div className="h-screen flex justify-center">
-          <div className="text-4xl font-bold text-gray-800 flex flex-col justify-around h-full">
+          <div className="text-4xl font-bold text-gray-800 flex-col justify-around h-full">
             <div className="text-center">
               This is the profesource main page c:
             </div>
