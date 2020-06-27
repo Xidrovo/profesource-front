@@ -8,6 +8,7 @@ import Layout from '@components/Layout'
 import PostCells from '@components/PostCells'
 import Post from '@components/Post'
 import Popular from '@components/PopularPost'
+import FilterPost from '../components/FilterPost'
 
 
 const IndexPage = () => {
@@ -41,6 +42,7 @@ const IndexPage = () => {
             <Post
               tag ="DAWM"
             />
+            <FilterPost></FilterPost>
             <PostCells 
             username="Carlos Carvajal"
             time="20" 
