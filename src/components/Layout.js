@@ -23,7 +23,7 @@ const Layout = (props) => {
     'focus:border-gray-300 border-transparent text-gray-500 hover:text-white hover:border-gray-300 focus:text-gray-700'
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="max-h-auto bg-gray-100">
       <nav className="bg-gray-800 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
           <div className="flex justify-between h-16">

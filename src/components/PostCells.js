@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CommentIcon from '@Icons/CommentIcon';
 import FavIcon from '@Icons/FavIcon';
 import TagIcon from '@Icons/TagIcon';
+import FilterPost from '../components/FilterPost';
 
 function PostCells(props) {
   const [escrito, setEscrito] = useState('')
@@ -13,8 +14,8 @@ function PostCells(props) {
     setEscrito(value)
   }
   return (
-    <div className="md:ml-24 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12">
-
+    <div className="md:ml-24 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-24">
+            <FilterPost/>
       <div className="space-x-4 mx-5 my-6 bg-transparent items-center">
         <div className="inline">
           <a className="user-link" href="#index.html">

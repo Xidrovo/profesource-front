@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import TagIcon from '@Icons/TagIcon';
+import TagIcon from '@Icons/TagIcon'
+import Button from '@components/Button'
 
 const Post = (props) => {
   return (
@@ -13,10 +14,13 @@ const Post = (props) => {
         </div>
       </div>
 
-      <div className="mx-4 my-8">
+      <div className="mx-4 my-4">
         <h2 className="text-blue-102 font-bold">{props.title}</h2>
         <div class="box__title bg-grey-lighter px-3 py-2 border-b"><h3 class="text-md text-grey-darker font-medium">Tittle</h3></div>
         <textarea placeholder="Deseas postear algo?" class=" w-full border-2 text-grey-darkest flex-1 p-1 bg-transparent resize-none max-w-full border-l-4" rows="6"></textarea>
+      </div>
+      <div className ="">
+      <Button indicator="Publicar"/>
       </div>
       <div className="flex my-0 space-x-10 bg-gray-101">
         <div className="inline mr-4 align-middle">

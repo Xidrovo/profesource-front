@@ -8,7 +8,6 @@ import Layout from '@components/Layout'
 import PostCells from '@components/PostCells'
 import Post from '@components/Post'
 import Popular from '@components/PopularPost'
-import FilterPost from '../components/FilterPost'
 
 
 const IndexPage = () => {
@@ -31,18 +30,17 @@ const IndexPage = () => {
         <Subject_List></Subject_List>
       </div>
         <div className="h-screen flex justify-center">
-          <div className="text-4xl font-bold text-gray-800 flex-col justify-around h-full">
+          <div className="text-4xl font-bold text-gray-800 flex-col justify-around">
             <div className="text-center">
               This is the profesource main page c:
             </div>
             {/* Post recibe como props username, time (hora de publicacion), el title del post!
                 favs como numero de likes, comments como numero de coments y tag como la etiqueta del post
              */}
-             <Popular></Popular>
+             <Popular/>
             <Post
               tag ="DAWM"
             />
-            <FilterPost></FilterPost>
             <PostCells 
             username="Carlos Carvajal"
             time="20" 
