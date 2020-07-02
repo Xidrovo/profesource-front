@@ -52,7 +52,7 @@ const Layout = (props) => {
               </div>
               {/* <Search_bar/> */}
             </div>
-            <Search_bar/>
+            <Search_bar />
             <div className="hidden sm:ml-6 sm:flex sm:items-center">
               <button
                 className="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:text-gray-500 focus:bg-gray-100 transition duration-150 ease-in-out"
@@ -122,12 +122,12 @@ const Layout = (props) => {
                       >
                         Settings
                       </a>
-                      <a
-                        href="#"
+                      <Link
+                        to="login"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                       >
                         Sign out
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 )}
