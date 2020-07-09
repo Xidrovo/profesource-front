@@ -1,18 +1,22 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
 
 
-const login = (props) => {
+const LoginModal = (props) => {
+
   return (
-    <Layout tittle="Login">
-      <SEO title="login page" />
-      <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <div className="bg-opacity-75 bg-black justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none transition ease-out duration-700"
+      >
+      <div class="rounded-lg bg-gray-100 w-1/2 min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 sm:mx-auto sm:w-full sm:max-w-md">
           {/* logo de la pagina */}
-          <img class="mx-auto h-12 w-auto" src="../images/gatsby-icon.png" alt="Workflow" />
+          {/* <img class="mx-auto h-12 w-auto" src="../images/gatsby-icon.png" alt="Workflow" /> */}
+          <img
+                  className="h-10 w-10 rounded-full mx-auto"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="profile-photo"
+          />
           <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
             Sign in to your account
           </h2>
@@ -25,7 +29,6 @@ const login = (props) => {
           </a>
           </p>
 
-        </div>
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
@@ -66,9 +69,10 @@ const login = (props) => {
               <div class="mt-6">
                 <span class="block w-full rounded-md shadow-sm">
                   <Link to="/">
-                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                    <button
+                    type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
                       Sign in
-            </button>
+                   </button>
                   </Link>
                 </span>
               </div>
@@ -82,7 +86,7 @@ const login = (props) => {
                 <div class="relative flex justify-center text-sm leading-5">
                   <span class="px-2 bg-white text-gray-500">
                     Or continue with
-            </span>
+                  </span>
                 </div>
               </div>
 
@@ -121,8 +125,9 @@ const login = (props) => {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
+  </div> 
   )
 }
 
-export default login
+export default LoginModal

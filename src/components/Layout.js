@@ -3,15 +3,19 @@ import { Link } from 'gatsby'
 import Search_bar from '@components/Search_bar'
 import NotificactionIcon from '@Icons/NotificationIcon'
 import UseOnClickOutside from '../hooks/useOnClickOutside'
+import LoginModal from '@components/LoginModal'
 
 
 const Layout = (props) => {
-  const [open, setOpen] = useState(false)
   const [currentNav, setCurrentNav] = useState('/')
+  const [open, setOpen] = useState(false)
   const ref = useRef()
+  const [showModal, setShowModal] = useState(false);
+  const refLoginModal = useRef()
 
   // Hooks
   UseOnClickOutside(ref, () => setOpen(false))
+  UseOnClickOutside(refLoginModal, () => setShowModal(false))
 
   useEffect(() => {
     setCurrentNav(window.location.pathname)
@@ -25,7 +29,7 @@ const Layout = (props) => {
   return (
     <div className="max-h-auto bg-gray-100">
       <nav className="bg-gray-800 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref = {ref} >
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center text-gray-200 font-semibold">
@@ -119,11 +123,14 @@ const Layout = (props) => {
                       <a
                         href="#"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                        onClick={() => {
+                          setShowModal(open)
+                        }}
                       >
                         Settings
                       </a>
                       <Link
-                        to="login"
+                        to="page-2"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                       >
                         Sign out
@@ -133,6 +140,13 @@ const Layout = (props) => {
                 )}
               </div>
             </div>
+            {showModal && 
+            <div onClick={() => {
+              setShowModal(open)
+            }}>
+                <LoginModal/>
+              </div>
+            }
             <div className="-mr-2 flex items-center sm:hidden">
               {/* <!-- Mobile menu button --> */}
               <button
@@ -232,6 +246,7 @@ const Layout = (props) => {
                 href="#"
                 className="mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
                 role="menuitem"
+                
               >
                 Settings
               </a>
@@ -239,6 +254,8 @@ const Layout = (props) => {
                 href="#"
                 className="mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
                 role="menuitem"
+
+                
               >
                 Sign out
               </a>
@@ -246,7 +263,6 @@ const Layout = (props) => {
           </div>
         </div>
       </nav>
-
       <div className="py-10">
         {props.title && (
           <header>

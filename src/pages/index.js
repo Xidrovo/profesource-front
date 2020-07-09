@@ -9,7 +9,6 @@ import PostCells from '@components/PostCells'
 import Post from '@components/Post'
 import Popular from '@components/PopularPost'
 
-
 const IndexPage = () => {
   const [escrito, setEscrito] = useState('')
 
@@ -25,6 +24,8 @@ const IndexPage = () => {
 
       <Layout title="Dashboard">
       <div class="float-right w-64 column hidden md:block">
+      <div></div>
+
         <Message></Message>
         <p class="h-6"></p>
         <Subject_List></Subject_List>
