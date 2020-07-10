@@ -4,8 +4,10 @@ import RecentIcon from '@Icons/RecentIcon';
 
 function FilterPost(){
 
+{/**md:ml-24 flex items-center space-x-2 border-solid border-2 border-gray-101 bg-gray-101  w-3/4 text-sm h-auto ml-12 mt-7 mb-5 */}
     return(
-        <div className="flex items-center space-x-2 border-solid border-2 border-gray-101 w-auto bg-gray-101 text-sm h-auto mx-10 my-5 rounded-lg justify-center">
+        
+        <div className="md:ml-24 flex items-center space-x-2 border-solid border-2 border-gray-101 w-3/4 bg-gray-101 text-sm h-auto ml-12 my-5 rounded-lg justify-center">
             <div className="inline-flex py-1 ml-2">
                     <button className="flex items-center bg-white border-gray-104 px-4 rounded-full hover:bg-transparent focus:outline-none border border-transparent hover:border-transparent">
                         <span className="text-blue-105 font-bold text-xs md:text-base">Todo</span>
