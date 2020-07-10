@@ -53,6 +53,15 @@ const Layout = (props) => {
                 >
                   Page two
                 </Link>
+                <Link
+                  to="/form/"
+                  // Interpolación
+                  className={`ml-8 ${navBase} ${
+                    currentNav === '/form/' ? navSelected : navUnselected
+                    }`}
+                >
+                  Contactanos
+                </Link>
               </div>
               {/* <Search_bar/> */}
             </div>
