@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 
 import Subject_List from '../components/Subject_List'
@@ -23,7 +23,8 @@ const IndexPage = () => {
 
     setEscrito(value)
   }
-  const [stepsEnabled, setStepsEnabled] = useState(false)
+  const [didMount, setDidMount] = useState(false)
+  const [stepsEnabled, setStepsEnabled] = useState(true)
   const [initialStep, setInicialStep] = useState(0)
   const [steps, setSteps] = useState([
     {
@@ -54,17 +55,22 @@ const IndexPage = () => {
       intro: 'PostCell Component',
     },
   ])
+  useEffect(() => {
+    setDidMount(true)
+  }, [])
 
   return (
     <div>
-      <Steps
-        enabled={stepsEnabled}
-        steps={steps}
-        initialStep={initialStep}
-        onExit={() => {
-          setStepsEnabled(false)
-        }}
-      />
+      {didMount && (
+        <Steps
+          enabled={stepsEnabled}
+          steps={steps}
+          initialStep={initialStep}
+          onExit={() => {
+            setStepsEnabled(false)
+          }}
+        />
+      )}
       <SEO title="Home" />
 
       <Layout title="Dashboard">
@@ -91,9 +97,9 @@ const IndexPage = () => {
             <div className="post">
               <Post tag="DAWM" />
             </div>
-            
+
             <div className="postCell">
-            <FilterPost></FilterPost>
+              <FilterPost></FilterPost>
               <PostCells
                 username="cxcarvajal"
                 time="20 horas"
@@ -105,10 +111,12 @@ const IndexPage = () => {
             </div>
 
             <div className=" text-lg flex justify-around">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-              onClick={() => {
-                setStepsEnabled(true)
-              }}>
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                onClick={() => {
+                  setStepsEnabled(true)
+                }}
+              >
                 Intro To ProfeSource
               </button>
             </div>
