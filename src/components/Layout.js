@@ -150,10 +150,8 @@ const Layout = (props) => {
               </div>
             </div>
             {showModal && 
-            <div onClick={() => {
-              setShowModal(open)
-            }}>
-                <LoginModal/>
+            <div>
+                <LoginModal setShowModal = {setShowModal}/>
               </div>
             }
             <div className="-mr-2 flex items-center sm:hidden">
