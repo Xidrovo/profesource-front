@@ -12,12 +12,12 @@ const Comment =(props)=>{
         time: [' 5 horas','4 horas','3 horas','3 horas'],
         content: ['x2', 'x3', 'x40', 'x5'],
         favs: ['0', '0', '1', '2'],
-        comments: ['1', '2', '3', '4']
+        comments: ['0', '0', '0', '0']
     };
 
-    {/*border-solid border-l-2 border-r-2 border-gray-101*/}
+    {/*md:ml-24 bg-white border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-10*/}
     return(
-        <div className="md:ml-24  w-3/4  h-auto ml-12 mb-10">
+        <div className="md:ml-24  w-3/4 text-base h-auto ml-12 mb-10">
             <div className="border-solid border-l-2 border-r-2 border-gray-101 ">
               {/* User info: user, hour */}
             <div className="space-x-4 mx-5  bg-transparent items-center">

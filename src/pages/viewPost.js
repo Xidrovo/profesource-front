@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 import Layout from '@components/Layout'
 import PostCells from '@components/PostCells'
 import PreComment from '@components/PreComment'
+import SubComment from '@components/SubComment'
 import Comment from '@components/Comment'
 
 
@@ -24,10 +25,9 @@ const PostPage = (props) => (
           </div>
         </div>
 
-        <div className="h-screen  flex-col justify-start ">
-          <div className=" text-4xl font-bold text-gray-800 flex-col justify-around ">
-            
-            <div className="flex justify-start">
+        <div className="flex flex-col ">
+          <div className=" text-4xl font-bold text-gray-800  justify-around "> 
+            <div>
               <PostCells
                 username="cxcarvajal"
                 time="20 horas"
@@ -37,28 +37,22 @@ const PostPage = (props) => (
                 tag="Dawm"
               />
             </div>
-            <div className="flex justify-start">
-              <PreComment
-              username= "keescast">
-
-              </PreComment>
+            <div>
+              <PreComment/>
             </div>
 
-
-            <div className="flex justify-start">        
-                    <Comment
-                    username="keescast"
-                    time="10 horas"
-                    content=" Estoy de acuerdo con lo que dices, saludos!"
-                    favs="20"
-                    comments="3">
-                    </Comment>
-                    
-                
+            <div>        
+              <Comment
+                username="keescast"
+                time="10 horas"
+                content=" Estoy de acuerdo con lo que dices, saludos!"
+                favs="20"
+                comments="3">
+              </Comment>    
             </div>
             
           </div>
-        </div>
+      </div>
 
   </Layout>
 )
