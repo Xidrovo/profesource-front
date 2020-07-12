@@ -15,11 +15,11 @@ function PostCells(props) {
   }
   
   return (
-    <div className="md:ml-24 bg-white border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-10">
+    <div className="md:ml-24 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-10">
             
       <div className="space-x-4 mx-5 my-6 bg-transparent items-center">
         <div className="inline">
-          <Link to='/page-2/' className='inline-flex text-blue-102 font-bold '>@{props.username}</Link>
+          <Link to='/profile/' className='inline-flex text-blue-102 font-bold '>@{props.username}</Link>
         </div>
         <div className="inline">
           <Link to="/viewPost/" className="inline-flex text-blue-104 font-light" >Hace {props.time}</Link>
