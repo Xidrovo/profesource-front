@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from "gatsby"
-import CommentIcon from '@Icons/CommentIcon';
-import FavIcon from '@Icons/FavIcon';
 
 
 

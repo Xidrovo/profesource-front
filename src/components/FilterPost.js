@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FavIcon from '@Icons/FavIcon';
 import RecentIcon from '@Icons/RecentIcon';
 
