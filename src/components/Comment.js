@@ -34,7 +34,7 @@ const Comment =(props)=>{
                 {/* Content of the comment */}    
             <div className="mx-5 my-2">
                 
-                <p className="break-all text-blue-103 font-normal text-sm">
+                <p className="break-word text-blue-103 font-normal text-sm">
                     {props.content}
                 </p>
             </div>

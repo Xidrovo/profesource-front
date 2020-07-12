@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Subject_List from '../components/Subject_List'
 import Message from '../components/Message'
@@ -7,11 +6,11 @@ import SEO from '../components/seo'
 import Layout from '@components/Layout'
 import PostCells from '@components/PostCells'
 import PreComment from '@components/PreComment'
-import SubComment from '@components/SubComment'
 import Comment from '@components/Comment'
 
 
-const PostPage = (props) => (
+const PostPage = (props) => {
+  return(
   <Layout title= {props.title}>
     <SEO title= {props.title}/>
 
@@ -55,6 +54,7 @@ const PostPage = (props) => (
       </div>
 
   </Layout>
-)
+  )
+  }
 
 export default PostPage
