@@ -11,9 +11,9 @@ const LoginModal = (props) => {
   return (
     <div className="bg-opacity-75 bg-black justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none transition ease-out duration-700"
       >
-      <div class="rounded-lg bg-gray-100 w-1/2 min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8"
+      <div class="rounded-lg bg-gray-100 sm:w-1/2 sm:py-12 sm:min-h-screen bg-gray-50 flex flex-col justify-center py-0 sm:px-6 lg:px-8"
       ref ={refLoginModal}>
-        <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 sm:mx-auto sm:w-full sm:max-w-md">
+        <div class="bg-white py-8 px-4 shadow rounded-lg sm:rounded-lg sm:px-10 sm:mx-auto sm:w-full sm:max-w-md">
           {/* logo de la pagina */}
           {/* <img class="mx-auto h-12 w-auto" src="../images/gatsby-icon.png" alt="Workflow" /> */}
           <img
@@ -35,7 +35,7 @@ const LoginModal = (props) => {
 
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <div class="bg-white sm:py-4 px-4 shadow sm:rounded-lg sm:px-10 py-4">
             <form action="#" method="POST">
               <div>
                 <label for="email" class="block text-sm font-medium leading-5 text-gray-700">

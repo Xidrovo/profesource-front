@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import CommentIcon from '@Icons/CommentIcon';
 import FavIcon from '@Icons/FavIcon';
 import TagIcon from '@Icons/TagIcon';
-import FilterPost from '../components/FilterPost';
 
 function PostCells(props) {
   const [escrito, setEscrito] = useState('')
