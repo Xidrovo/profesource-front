@@ -73,20 +73,18 @@ const IndexPage = () => {
       <SEO title="Home" />
 
       <Layout title="Dashboard">
-        <div class="float-right w-64 column hidden md:block">
+        <div class="float-right w-64 column hidden space-y-12 md:block">
           <div className="message">
             <Message />
           </div>
-          <hr />
+          
           <div className="mt-5 subject">
             <Subject_List />
           </div>
         </div>
         <div className="h-screen flex justify-center">
           <div className="text-4xl font-bold text-gray-800 flex-col justify-around">
-            <div className="text-center profesource">
-              This is the profesource main page c:
-            </div>
+            
             {/* Post recibe como props username, time (hora de publicacion), el title del post!
                 favs como numero de likes, comments como numero de coments y tag como la etiqueta del post
              */}
@@ -94,7 +92,7 @@ const IndexPage = () => {
               <Popular />
             </div>
             <div className="post">
-              <Post tag="DAWM" />
+              <Post tag="¿Materia?" />
             </div>
 
             <div className="postCell">
@@ -110,14 +108,7 @@ const IndexPage = () => {
             </div>
 
             <div className=" text-lg flex justify-around">
-              <button
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                onClick={() => {
-                  setStepsEnabled(true)
-                }}
-              >
-                Intro To ProfeSource
-              </button>
+              
             </div>
             <div className="text-lg text-center items-center px-4">
               {escrito && (
@@ -126,9 +117,7 @@ const IndexPage = () => {
                 </div>
               )}
             </div>
-            <div className="text-blue-800 hover:text-blue-400 text-xl text-center">
-              <Link to="/page-2/">Go to page 2</Link>
-            </div>
+            
           </div>
         </div>
       </Layout>

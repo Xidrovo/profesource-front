@@ -8,9 +8,9 @@ const Subject_List = () =>{
         };
         
         return(
-            <div class="rounded-lg border-4 border-opacity-50 border-gray-800" >
-                <h2 class="p-3 text-white bg-gray-800 text-justify">Materias</h2>
-                <div class="p-3">
+            <div class="space-y-2" >
+                <h2 class="p-3 text-white text-center bg-gray-800  rounded-lg">Materias</h2>
+                <div class="p-3 rounded-lg border-2 border-gray-102">
                 <table>
                     <tbody>
                     {materias.nombre.map((materia,i) => {

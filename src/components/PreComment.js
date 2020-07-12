@@ -1,4 +1,7 @@
 import React from 'react';
+import TagIcon from '@Icons/TagIcon'
+import ImageIcon from '@Icons/ImageIcon'
+import Button from '@components/Button'
 import { Link } from "gatsby"
 
 
@@ -20,6 +23,29 @@ const PreComment = (props) =>{
                 class=" w-full border-2 text-grey-darkest flex-1 p-1 bg-transparent resize-none max-w-full border-l-4"
                 rows="6">
             </textarea>
+            </div>
+                  
+            <div className="flex my-0 space-x-2 mr-6 ">
+        
+                <div className="flex mx-6 mb-4 align-middle">
+                <button className="flex items-center space-x-2 bg-transparent hover:bg-transparent focus:outline-none hover:border-transparent">
+                    <ImageIcon
+                        className="fill-current  text-blue-101"
+                        width="15px"
+                        color={'#52658f'}
+                    />
+                    <span className="text-blue-101 font-semibold text-sm " >Imagen</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div className="flex justify-end px-6 pt-2">
+                
+                {/* <Button indicator="Publicar" onClick={()=>{alert('Publicación exitosa')}}/> */}
+                <Button
+                indicator="Publicar"
+                />
             </div>
         </div>
     )

@@ -37,7 +37,7 @@ const PostPage = (props) => {
               />
             </div>
             <div>
-              <PreComment/>
+              <PreComment username="user"/>
             </div>
 
             <div>        

@@ -42,7 +42,7 @@ function PostCells(props) {
 
       <div className="flex my-0 space-x-10 bg-gray-101">
         <div className="flex ml-4 align-middle ">
-          <button className=" inline-flex items-center bg-transparent hover:bg-transparent focus:outline-none border border-transparent hover:border-transparent">
+          <button className=" inline-flex items-center bg-transparent hover:bg-transparent focus:outline-none hover:border-transparent">
             <FavIcon
               className="fill-current mr-2 text-blue-101 "
               width="15px"
@@ -52,7 +52,7 @@ function PostCells(props) {
         </div>
 
         <div className="flex">
-          <Link to='/viewPost/'className="inline-flex items-center bg-transparent hover:bg-transparent focus:outline-none border border-transparent hover:border-transparent">
+          <Link to='/viewPost/'className="inline-flex items-center bg-transparent hover:bg-transparent focus:outline-none hover:border-transparent">
             <CommentIcon
               className="fill-current mx-2 text-blue-101 "
               width="15px"
@@ -63,7 +63,7 @@ function PostCells(props) {
         </div>
 
         <div className="flex ">
-          <button className="flex items-center  hover:bg-transparent focus:outline-none border border-transparent hover:border-transparent">
+          <button className="flex items-center  hover:bg-transparent focus:outline-none hover:border-transparent">
             
              <TagIcon
               className="fill-current mx-2 text-blue-101"
