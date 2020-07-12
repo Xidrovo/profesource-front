@@ -96,15 +96,18 @@ const IndexPage = () => {
             </div>
 
             <div className="postCell">
-              <FilterPost></FilterPost>
-              <PostCells
-                username="cxcarvajal"
-                time="20 horas"
-                title="Mi Primer Post en ProfeSource!"
-                favs="10"
-                comments="5"
-                tag="Dawm"
-              />
+              <div className="pb-16">
+                <FilterPost></FilterPost>
+                <PostCells
+                  username="cxcarvajal"
+                  time="20 horas"
+                  title="Mi Primer Post en ProfeSource!"
+                  favs="10"
+                  comments="5"
+                  tag="Dawm"
+                />  
+              </div>
+              
             </div>
 
             <div className=" text-lg flex justify-around">
