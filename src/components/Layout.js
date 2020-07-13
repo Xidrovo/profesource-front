@@ -37,9 +37,12 @@ const Layout = (props) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
           <div className="flex justify-between h-16">
             <div className="flex">
-              <div className="flex-shrink-0 flex items-center text-gray-200 font-semibold">
+              <Link
+                to="/"
+                className="flex-shrink-0 flex items-center text-gray-200 font-semibold"
+              >
                 Profesource
-              </div>
+              </Link>
               <div className="hidden sm:ml-6 sm:flex">
                 <Link
                   to="/"
@@ -50,14 +53,14 @@ const Layout = (props) => {
                 >
                   Dashboard
                 </Link>
-                <Link
+                {/* <Link
                   to="/page-2/"
                   className={`ml-8 ${navBase} ${
                     currentNav === '/page-2/' ? navSelected : navUnselected
                   }`}
                 >
                   Page two
-                </Link>
+                </Link> */}
                 <Link
                   to="/form/"
                   // Interpolación
@@ -134,17 +137,17 @@ const Layout = (props) => {
                   >
                     <div className="py-1 rounded-md bg-white shadow-xs">
                       <Link
-                        to="/page-2/"
+                        to="/profile/"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                       >
                         Profile
                       </Link>
-                      <a
-                        href="#"
+                      <Link
+                        to="/page-2/"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                       >
                         Settings
-                      </a>
+                      </Link>
                       <Link
                         to="/"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
@@ -222,16 +225,8 @@ const Layout = (props) => {
               Dashboard
             </Link>
             <Link
-              to="/page-2/"
-              className = {`${
-                currentNav == '/page-2/' ? navSelectedMobile : navUnselectedMobile
-              }`}
-            >
-              Profile
-            </Link>
-            <Link
               to="/form/"
-              className = {`${
+              className={`${
                 currentNav == '/form/' ? navSelectedMobile : navUnselectedMobile
               }`}
             >
@@ -247,14 +242,19 @@ const Layout = (props) => {
                   alt="profile-photo"
                 />
               </div>
-              <div className="ml-3">
-                <div className="text-base font-medium leading-6 text-gray-800">
-                  Tom Cook
+              <Link
+                to="/profile/"
+                className="mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
+              >
+                <div className="ml-3">
+                  <div className="text-base font-medium leading-6 text-gray-500">
+                    Carlos Carvajal
+                  </div>
+                  <div className="text-sm font-medium leading-5 text-gray-500">
+                    @cxcarvajal
+                  </div>
                 </div>
-                <div className="text-sm font-medium leading-5 text-gray-500">
-                  tom@example.com
-                </div>
-              </div>
+              </Link>
             </div>
             <div
               className="mt-3"
@@ -262,20 +262,19 @@ const Layout = (props) => {
               aria-orientation="vertical"
               aria-labelledby="user-menu"
             >
-              <a
+              {/* <a
                 href="#"
                 className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
                 role="menuitem"
               >
                 Your Profile
-              </a>
-              <a
-                href="#"
-                className="mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
-                role="menuitem"
+              </a> */}
+              <Link
+                to="/page-2/"
+                className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
               >
                 Settings
-              </a>
+              </Link>
               <a
                 href="#"
                 className="mt-1 block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"

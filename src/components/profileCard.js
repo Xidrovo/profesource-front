@@ -4,7 +4,7 @@ import CalendarIcon from '@Icons/CalendarIcon';
 
 const ProfileCard = (props) =>{
     return(
-        <div className=" flex border border-solid-2  m-3 bg-white rounded rounded-lg md:w-64 md:flex-col ">
+        <div className=" flex border border-solid-2  m-3 bg-white rounded-lg md:w-64 md:flex-col ">
             <div className="flex justify-center items-center">
                     <img
                         className="h-30 rounded-md ml-3 my-2 md:rounded-t-lg md:rounded-b-none md:w-64 md:m-0"
