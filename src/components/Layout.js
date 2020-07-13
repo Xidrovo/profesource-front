@@ -242,8 +242,10 @@ const Layout = (props) => {
             </Link>
             <Link
               to="/information/"
-              className = {`${
-                currentNav == '/information/' ? navSelectedMobile : navUnselectedMobile
+              className={`${
+                currentNav == '/information/'
+                  ? navSelectedMobile
+                  : navUnselectedMobile
               }`}
             >
               Nosotros

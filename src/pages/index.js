@@ -77,14 +77,13 @@ const IndexPage = () => {
           <div className="message">
             <Message />
           </div>
-          
+
           <div className="mt-5 subject">
             <Subject_List />
           </div>
         </div>
         <div className="h-screen flex justify-center">
           <div className="text-4xl font-bold text-gray-800 flex-col justify-around">
-            
             {/* Post recibe como props username, time (hora de publicacion), el title del post!
                 favs como numero de likes, comments como numero de coments y tag como la etiqueta del post
              */}
@@ -105,14 +104,11 @@ const IndexPage = () => {
                   favs="10"
                   comments="5"
                   tag="Dawm"
-                />  
+                />
               </div>
-              
             </div>
 
-            <div className=" text-lg flex justify-around">
-              
-            </div>
+            <div className=" text-lg flex justify-around"></div>
             <div className="text-lg text-center items-center px-4">
               {escrito && (
                 <div className="whitespace-pre-wrap">
@@ -120,7 +116,6 @@ const IndexPage = () => {
                 </div>
               )}
             </div>
-            
           </div>
         </div>
       </Layout>

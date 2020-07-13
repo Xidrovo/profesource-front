@@ -2,7 +2,7 @@ import React from 'react'
 import Icon from './Icon'
 
 const ImageIcon = (props) => (
-    <Icon
+  <Icon
     viewBox="0 0 32 32"
     className={props.className}
     width={props.width}
@@ -14,4 +14,4 @@ const ImageIcon = (props) => (
   </Icon>
 )
 
-export default ImageIcon;
+export default ImageIcon
