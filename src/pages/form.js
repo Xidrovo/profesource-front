@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import Iframe from 'react-iframe'
 
 import SEO from '../components/seo'
 import Layout from '@components/Layout'
 
 const FormPage = (props) => {
-  var LOCATION_KEY = process.env.GATSBY_API_MAP
+  var LOCATION_KEY = process.env.PROD_KEY
   return (
     <Layout title="Contáctanos">
       <SEO title="Contáctanos" />
@@ -15,6 +16,7 @@ const FormPage = (props) => {
             <div class="rounded-t-lg border-2 border-opacity-25 border-gray-600 p-3 bg-gray-800">
               <h3 class="text-lg leading-6 font-medium text-white">
                 Datos Personales
+                {/* {console.log(LOCATION_KEY)} */}
               </h3>
               <p class="mt-1 text-sm leading-5 text-gray-500">
                 Usa un correo fijo donde puedas ser contactado
@@ -139,17 +141,10 @@ const FormPage = (props) => {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href={`https://www.google.com.ec/maps/place/Escuela+Superior+Polit%C3%A9cnica+del+Litoral+(ESPOL)/@-2.1481404,-79.9666772,17z/data=!3m1!4b1!4m5!3m4!1s0x902d72f925e5bfdb:0x327cdb9f7f4ba3b2!8m2!3d-2.1481458!4d-79.9644885`}
+                      href={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0458467302833!2d-79.91586848513842!3d-2.1360918984429293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d64016bc311:0x7828cb2d24ac78bd!2sRío Sucua, Guayaquil 090501!5e0!3m2!1ses!2sec!4v1591226718407!5m2!1ses!2sec`}
                       className="mt-1 text-left"
-                    >
-                      <img
-                        id="mapa"
-                        alt="Ubicación"
-                        crossOrigin="anonymous"
-                        className="w-auto"
-                        src={`https://www.google.com.ec/maps/place/Escuela+Superior+Polit%C3%A9cnica+del+Litoral+(ESPOL)/@-2.1481404,-79.9666772,17z/data=!3m1!4b1!4m5!3m4!1s0x902d72f925e5bfdb:0x327cdb9f7f4ba3b2!8m2!3d-2.1481458!4d-79.9644885&key=${LOCATION_KEY}`}
-                      />
-                    </a>
+                    />
+                    <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0458467302833!2d-79.91586848513842!3d-2.1360918984429293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d64016bc311%3A0x7828cb2d24ac78bd!2sR%C3%ADo%20Sucua%2C%20Guayaquil%20090501!5e0!3m2!1ses!2sec!4v1591226718407!5m2!1ses!2sec" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"/>
                   </div>
                 </div>
               </div>
