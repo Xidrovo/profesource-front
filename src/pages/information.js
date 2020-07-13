@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import SEO from '../components/seo'
+import AlertIcon from '@Icons/AlertIcon'
 import Layout from '@components/Layout'
-import FormPage from './information'
 
-const Information = (props) => {
-  var LOCATION_KEY = 'AIzaSyAp8PdAo33pwVlNZKxlmbcHUOBeTfghXW4'
-  return (
+const Information = (props) => (
     <Layout title="Información">
-      <SEO title="Información" />
-
-    </Layout>
-  )
-}
+        <SEO title="Información" />
+        <div className="info">
+            <div className="flex justify-center">
+        <Link to="/">
+          <div className="p-4 bg-blue-700 hover:bg-blue-500 text-white hover:text-gray-700 text-center rounded-lg">
+            Go back to the homepage
+          </div>
+        </Link>
+      </div>
+    </div>
+  </Layout>
+)
 
 export default Information
 

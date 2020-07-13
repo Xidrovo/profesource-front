@@ -67,6 +67,14 @@ const Layout = (props) => {
                 >
                   Contactanos
                 </Link>
+                <Link
+                  to="/information/"
+                  className={`ml-8 ${navBase} ${
+                    currentNav === '/information/' ? navSelected : navUnselected
+                  }`}
+                >
+                  Información
+                </Link>
               </div>
               {/* <Search_bar/> */}
             </div>
@@ -236,6 +244,14 @@ const Layout = (props) => {
               }`}
             >
               Contáctenos
+            </Link>
+            <Link
+              to="/information/"
+              className = {`${
+                currentNav == '/information/' ? navSelectedMobile : navUnselectedMobile
+              }`}
+            >
+              Información
             </Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
