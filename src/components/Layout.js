@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
 import Search_bar from '@components/Search_bar'
 import NotificactionIcon from '@Icons/NotificationIcon'
-import UseOnClickOutside from '../hooks/useOnClickOutside'
+import UseOnClickOutside from '../hooks/UseOnClickOutside'
 import LoginModal from '@components/LoginModal'
 
 const Layout = (props) => {
