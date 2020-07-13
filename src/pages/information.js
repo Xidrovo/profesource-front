@@ -4,11 +4,11 @@ import SEO from '../components/seo'
 import Layout from '@components/Layout'
 
 const Information = (props) => (
-    <Layout title="Información">
-        <SEO title="Información" />
+    <Layout title="Nosotros">
+        <SEO title="Nosotros" />
         <div className="info">
             <p class="sm:col-span-3">
-                Usa un correo fijo donde puedas ser contactado
+                Somos una comunidad que brinda un espacio para que estudiantes puedan brindar o pedir ayuda en temas educativos.
             </p>
             <div className="flex justify-center">
                 <Link to="/">

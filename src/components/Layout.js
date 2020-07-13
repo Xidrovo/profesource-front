@@ -76,7 +76,7 @@ const Layout = (props) => {
                     currentNav === '/information/' ? navSelected : navUnselected
                   }`}
                 >
-                  Información
+                  Nosotros
                 </Link>
               </div>
               {/* <Search_bar/> */}
@@ -246,7 +246,7 @@ const Layout = (props) => {
                 currentNav == '/information/' ? navSelectedMobile : navUnselectedMobile
               }`}
             >
-              Información
+              Nosotros
             </Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
