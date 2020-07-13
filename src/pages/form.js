@@ -184,10 +184,10 @@ const FormPage = (props) => {
                       />
                     </div>
                     <div class="ml-3 text-sm leading-5">
-                      <label for="comments" class="font-medium text-gray-700">
+                      <label for="comments" class="font-medium text-gray-700 my-auto">
                         Comentarios
                       </label>
-                      <p class="text-gray-500">
+                      <p class="text-gray-500 my-auto">
                         Te notificaremos cuando alguien haya respondido a tu
                         pulicacion
                       </p>
@@ -203,10 +203,10 @@ const FormPage = (props) => {
                         />
                       </div>
                       <div class="ml-3 text-sm leading-5">
-                        <label for="new_post" class="font-medium text-gray-700">
+                        <label for="new_post" class="font-medium text-gray-700 my-auto">
                           Nuevas publicaciones
                         </label>
-                        <p class="text-gray-500">
+                        <p class="text-gray-500 my-auto">
                           Te notificaremos cuando hayan nuevas publicaciones en
                           los grupos
                         </p>
@@ -225,11 +225,11 @@ const FormPage = (props) => {
                       <div class="ml-3 text-sm leading-5">
                         <label
                           for="new_groups"
-                          class="font-medium text-gray-700"
+                          class="font-medium text-gray-700 my-auto"
                         >
                           Nuevos grupos
                         </label>
-                        <p class="text-gray-500">
+                        <p class="text-gray-500 my-auto">
                           Te notificaremos cuando haya una actualizacion de
                           nuevos grupos
                         </p>
