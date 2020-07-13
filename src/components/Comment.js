@@ -8,9 +8,9 @@ import SubComment from './SubComment';
 const Comment =(props)=>{
 
     let subcommentarios={
-        usernames: ['rm','nl','jk','fq'],
+        usernames: ['rmendoza','nlopez','jrodriguez','fcastillo'],
         time: [' 5 horas','4 horas','3 horas','3 horas'],
-        content: ['x2', 'x3', 'x40', 'x5'],
+        content: ['Bienvenido!', 'La plataforma es de gran ayuda, saludos!', 'Te acostumbrarás rápido', 'Bienvenidos!'],
         favs: ['0', '0', '1', '2'],
         comments: ['0', '0', '0', '0']
     };
@@ -18,7 +18,7 @@ const Comment =(props)=>{
     {/*md:ml-24 bg-white border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-10*/}
     return(
         <div className="md:ml-24  w-3/4 text-base h-auto ml-12 mb-10">
-            <div className="border-solid border-l-2 border-r-2 border-gray-101 ">
+            <div className="border-solid border-2 mb-5 pt-2 border-gray-101 ">
               {/* User info: user, hour */}
             <div className="space-x-4 mx-5  bg-transparent items-center">
                 <div className="inline">
@@ -34,7 +34,7 @@ const Comment =(props)=>{
                 {/* Content of the comment */}    
             <div className="mx-5 my-2">
                 
-                <p className="break-all text-blue-103 font-normal text-sm">
+                <p className="break-word text-blue-103 font-normal text-sm">
                     {props.content}
                 </p>
             </div>
@@ -64,7 +64,7 @@ const Comment =(props)=>{
             </div>
             </div>
 
-            <div className="flex-col">
+            <div className="flex-col space-y-3">
                 {subcommentarios.usernames.map((usernames,i) => {
                         return(
                                 <div className="ml-5">

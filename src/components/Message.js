@@ -2,10 +2,10 @@ import React from 'react';
 
 const Message = () =>{
         return (
-            <div className="rounded-lg border-4 border-opacity-50 border-gray-800">
+            <div className="rounded-lg  border-2 border-gray-102">
                 <div>
-                    <h2 class="p-3 text-white bg-gray-800 text-justify">Profesource</h2>
-                    <p class="p-3 text-justify">Somos una comunidad que brinda un espacio para que estudiantes puedan brindar o pedir ayuda en temas educativos.</p>
+                    <h2 class="py-3 px-5 text-gray-800 font-bold text-xl text-justify">Profesource</h2>
+                    <p class="py-3 px-5 text-justify">Somos una comunidad que brinda un espacio para que estudiantes puedan brindar o pedir ayuda en temas educativos.</p>
                 </div>
             </div>
         );

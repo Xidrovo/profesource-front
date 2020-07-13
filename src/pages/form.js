@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import Layout from '@components/Layout'
 
 const FormPage = (props) => {
-  var LOCATION_KEY = 'AIzaSyAp8PdAo33pwVlNZKxlmbcHUOBeTfghXW4'
+  var LOCATION_KEY = process.env.GATSBY_API_MAP
   return (
     <Layout title="Contáctanos">
       <SEO title="Contáctanos" />
@@ -31,7 +31,7 @@ const FormPage = (props) => {
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
                     id="first_name"
-                    class="form-input shadow appearance-none border rounded w-full text-gray-700 leading-tight focus:shadow-outline transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
               </div>
@@ -46,7 +46,7 @@ const FormPage = (props) => {
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
                     id="last_name"
-                    class="form-input shadow appearance-none border rounded w-full text-gray-700 leading-tight  focus:shadow-outline transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ const FormPage = (props) => {
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
                     id="cell-phone"
-                    class="form-input shadow appearance-none border rounded w-full text-gray-700 leading-tight  focus:shadow-outline transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
               </div>
@@ -77,7 +77,7 @@ const FormPage = (props) => {
                   <input
                     id="email"
                     type="email"
-                    class="form-input shadow appearance-none border rounded w-full text-gray-700 leading-tight  focus:shadow-outline transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
               </div>
@@ -94,7 +94,7 @@ const FormPage = (props) => {
                     id="detail"
                     rows="10"
                     cols="50"
-                    class="form-input shadow appearance-none border rounded w-full text-gray-700 leading-tight  focus:shadow-outline transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
               </div>
@@ -116,7 +116,7 @@ const FormPage = (props) => {
                   <div class="mt-1 rounded-md shadow-sm">
                     <select
                       id="zona"
-                      class="form-input shadow appearance-none border rounded w-full text-gray-700 leading-tight  focus:shadow-outline transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                      class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                     >
                       <option>Villaclub</option>
                       <option>Guasmo</option>
@@ -286,7 +286,7 @@ const FormPage = (props) => {
             </div>
           </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-5 mb-6">
+        <div class="mt-8 border-t border-gray-200 pt-5 mb-6 mr-6">
           <div class="flex justify-end">
             <span class="inline-flex rounded-md shadow-sm">
               <button
