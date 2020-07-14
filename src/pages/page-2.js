@@ -4,15 +4,16 @@ import { Link } from 'gatsby'
 import SEO from '../components/seo'
 import AlertIcon from '@Icons/AlertIcon'
 import Layout from '@components/Layout'
+import Stepper from '@components/Stepper'
 
 const SecondPage = () => (
-  <Layout title="Page-2">
+  <Layout title="Proceso para publicar contenido en ProfeSource:">
     <SEO title="Page two" />
-    <div className="p-24">
-      <div className="text-center text-3xl font-semibold">
+    <div className="p-6">
+      {/* <div className="text-center text-3xl font-semibold">
         Welcome to the page 2!
-      </div>
-      <div className="flex flex-row text-2xl my-16 justify-center">
+      </div> */}
+      {/* <div className="flex flex-row text-2xl my-16 justify-center">
         Here is an icon you can use in your project
         <div className="text-green-600 my-auto">
           <AlertIcon
@@ -38,9 +39,12 @@ const SecondPage = () => (
             height="20px"
           />
         </div>
+      </div> */}
+      <div className="flex justify-center">
+      <Stepper/>
       </div>
       <div className="flex justify-center">
-        <Link to="/">
+      <Link to="/">
           <div className="p-4 bg-blue-700 hover:bg-blue-500 text-white hover:text-gray-700 text-center rounded-lg">
             Go back to the homepage
           </div>
