@@ -1,5 +1,4 @@
 import React from 'react'
-import TagIcon from '@Icons/TagIcon'
 import ImageIcon from '@Icons/ImageIcon'
 import Button from '@components/Button'
 import { Link } from 'gatsby'

@@ -68,7 +68,7 @@ const Layout = (props) => {
                     currentNav === '/form/' ? navSelected : navUnselected
                   }`}
                 >
-                  Contactanos
+                  Contáctanos
                 </Link>
                 <Link
                   to="/information/"

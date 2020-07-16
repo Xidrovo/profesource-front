@@ -1,5 +1,4 @@
 import React from 'react'
-import PostCells from '@components/PostCells'
 import CellContent from '@components/CellContent'
 
 const ProfilePanel = (props) => {
