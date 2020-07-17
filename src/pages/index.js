@@ -12,6 +12,7 @@ import { Steps } from 'intro.js-react'
 // import 'intro.js/themes/introjs-modern.css'
 import 'intro.js/introjs.css'
 import FilterPost from '../components/FilterPost'
+import Footer from '../components/Footer'
 
 const IndexPage = () => {
   const [escrito, setEscrito] = useState('')
@@ -82,7 +83,7 @@ const IndexPage = () => {
             <Subject_List />
           </div>
         </div>
-        <div className="h-screen flex justify-center">
+        <div className="flex justify-center">
           <div className="text-4xl font-bold text-gray-800 flex-col justify-around">
             {/* Post recibe como props username, time (hora de publicacion), el title del post!
                 favs como numero de likes, comments como numero de coments y tag como la etiqueta del post
@@ -108,7 +109,7 @@ const IndexPage = () => {
               </div>
             </div>
 
-            <div className=" text-lg flex justify-around"></div>
+            
             <div className="text-lg text-center items-center px-4">
               {escrito && (
                 <div className="whitespace-pre-wrap">
@@ -119,6 +120,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Layout>
+      
     </div>
   )
 }

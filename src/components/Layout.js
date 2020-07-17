@@ -4,6 +4,7 @@ import Search_bar from '@components/Search_bar'
 import NotificactionIcon from '@Icons/NotificationIcon'
 import UseOnClickOutside from '../hooks/UseOnClickOutside'
 import LoginModal from '@components/LoginModal'
+import Footer from '../components/Footer'
 
 const Layout = (props) => {
   const [currentNav, setCurrentNav] = useState('/')
@@ -318,13 +319,17 @@ const Layout = (props) => {
           </header>
         )}
         <main>
-          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div className="max-w-7xl min-h-screen mx-auto sm:px-6 lg:px-8">
             {/* <!-- Replace with your content --> */}
             {props.children}
             {/* <!-- /End replace --> */}
           </div>
         </main>
       </div>
+      <div>
+          <Footer/>
+      </div>
+      
     </div>
   )
 }
