@@ -327,9 +327,8 @@ const Layout = (props) => {
         </main>
       </div>
       <div>
-          <Footer/>
+      <Footer/>
       </div>
-      
     </div>
   )
 }
