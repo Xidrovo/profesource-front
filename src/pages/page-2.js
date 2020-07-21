@@ -41,11 +41,9 @@ const SecondPage = () => (
         </div>
       </div> */}
       <div className="flex justify-center">
-      <Stepper/>
+        <Stepper />
       </div>
-      <div className="flex justify-center">
-      
-      </div>
+      <div className="flex justify-center"></div>
     </div>
   </Layout>
 )

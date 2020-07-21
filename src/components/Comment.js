@@ -18,11 +18,9 @@ const Comment = (props) => {
     comments: ['0', '0', '0', '0'],
   }
 
-  
   return (
     <div className="md:ml-24  w-3/4 text-base h-auto ml-12 mb-10">
       <div className="border-solid border-2 mb-5 pt-2 border-gray-101 ">
-        
         <div className="space-x-4 mx-5  bg-transparent items-center">
           <div className="inline">
             <Link
@@ -42,13 +40,12 @@ const Comment = (props) => {
           </div>
         </div>
 
-        
         <div className="mx-5 my-2">
           <p className="break-word text-blue-103 font-normal text-sm">
             {props.content}
           </p>
         </div>
-        
+
         <div className="flex mb-3 space-x-3 bg-transparent">
           <div className="flex ml-4 align-middle ">
             <button className=" inline-flex items-center bg-transparent hover:bg-transparent focus:outline-none border border-transparent hover:border-transparent">

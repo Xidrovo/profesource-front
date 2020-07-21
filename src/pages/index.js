@@ -109,7 +109,6 @@ const IndexPage = () => {
               </div>
             </div>
 
-            
             <div className="text-lg text-center items-center px-4">
               {escrito && (
                 <div className="whitespace-pre-wrap">
@@ -120,7 +119,6 @@ const IndexPage = () => {
           </div>
         </div>
       </Layout>
-      
     </div>
   )
 }

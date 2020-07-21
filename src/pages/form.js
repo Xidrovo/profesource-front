@@ -145,18 +145,18 @@ const FormPage = (props) => {
                       className="mt-1 text-left"
                     />
                     <div className="content-center">
-                    <div className="w-auto">
-                    <Iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0458467302833!2d-79.91586848513842!3d-2.1360918984429293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d64016bc311%3A0x7828cb2d24ac78bd!2sR%C3%ADo%20Sucua%2C%20Guayaquil%20090501!5e0!3m2!1ses!2sec!4v1591226718407!5m2!1ses!2sec"
-                      width="300"
-                      height="350"
-                      frameborder="0"
-                      style="border:0;"
-                      allowfullscreen=""
-                      aria-hidden="false"
-                      tabindex="0"
-                    />
-                    </div>
+                      <div className="w-auto">
+                        <Iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0458467302833!2d-79.91586848513842!3d-2.1360918984429293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d64016bc311%3A0x7828cb2d24ac78bd!2sR%C3%ADo%20Sucua%2C%20Guayaquil%20090501!5e0!3m2!1ses!2sec!4v1591226718407!5m2!1ses!2sec"
+                          width="300"
+                          height="350"
+                          frameborder="0"
+                          style="border:0;"
+                          allowfullscreen=""
+                          aria-hidden="false"
+                          tabindex="0"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -188,7 +188,10 @@ const FormPage = (props) => {
                       />
                     </div>
                     <div class="ml-3 text-sm leading-5">
-                      <label for="comments" class="font-medium text-gray-700 my-auto">
+                      <label
+                        for="comments"
+                        class="font-medium text-gray-700 my-auto"
+                      >
                         Comentarios
                       </label>
                       <p class="text-gray-500 my-auto">
@@ -207,7 +210,10 @@ const FormPage = (props) => {
                         />
                       </div>
                       <div class="ml-3 text-sm leading-5">
-                        <label for="new_post" class="font-medium text-gray-700 my-auto">
+                        <label
+                          for="new_post"
+                          class="font-medium text-gray-700 my-auto"
+                        >
                           Nuevas publicaciones
                         </label>
                         <p class="text-gray-500 my-auto">
