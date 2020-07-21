@@ -12,11 +12,11 @@ const Information = (props) => (
           <h3 class="tituloseccion text-lg leading-6 font-medium text-black">
             Informacion 
           </h3>
-          <p class="flex items-center px-4">
+          <p class="flex items-center px-4 text-justify">
             Somos una comunidad que brinda un espacio para que estudiantes puedan
             brindar o pedir ayuda en temas educativos.
           </p>
-          <p class="sm:col-spab=n-3">
+          <p class="flex items-center px-4 text-justify">
             Nuestra propuesta intenta resolver la accesibilidad a foros con
             información fiable, ejercicios resueltos o material de estudios
             gratuitos de materias, ya que esto ocasiona que los estudiantes que se
@@ -30,10 +30,10 @@ const Information = (props) => (
           <p></p>
         </div>
         <div id="Personas">
-          <h1 class="tituloseccion">
-            Personas 
+          <h1 class="tituloseccion text-lg leading-6 font-medium text-black">
+            Quienes somos? 
           </h1>
-          <img src='src/images/vielka.jpeg' class='imgRedonda' />
+          <img src='src/images/vielka.jpeg' class='imgRedonda'/>
         </div>
         <div className="flex justify-center">
           <Link to="/">
