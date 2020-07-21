@@ -3,7 +3,21 @@
 @tailwind utilities;
 
 .imgRedonda {
-    width:300px;
-    height:300px;
-    border-radius:150px;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+}
+.imgTable{
+    width: 124px;
+    text-align: center;
+    background: white;
+}
+
+.tableClass{
+    margin: 10px 0;
+    border-spacing: 0;
+    border: 0;
+    width: 99%;
+    text-align: center;
+    background: white;
 }

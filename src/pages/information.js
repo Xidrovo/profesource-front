@@ -12,6 +12,7 @@ const Information = (props) => (
           <h3 class="tituloseccion text-lg leading-6 font-medium text-black">
             Informacion 
           </h3>
+          <p></p>
           <p class="flex items-center px-4 text-justify">
             Somos una comunidad que brinda un espacio para que estudiantes puedan
             brindar o pedir ayuda en temas educativos.
@@ -30,10 +31,38 @@ const Information = (props) => (
           <p></p>
         </div>
         <div id="Personas">
-          <h1 class="tituloseccion text-lg leading-6 font-medium text-black">
-            Quienes somos? 
+          <h1 class="tituloseccion text-lg leading-6 font-medium text-black text-center">
+            QUIENES SOMOS? 
           </h1>
-          <img src='src/images/vielka.jpeg' class='imgRedonda'/>
+          <table  border="1"class='tableClass' >
+            <td>
+              <img src='https://dam.vanidades.com/wp-content/uploads/2019/04/900katiebouman-770x513.jpg' class='imgRedonda' />
+            </td>
+            <td>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS_uRqSEPeElYHOyR8_6opHrtKg-n7zpjihUA&usqp=CAU' class='imgRedonda' />
+            </td>
+            <td>
+              <img src='https://www.marketingdirecto.com/wp-content/uploads/2020/03/dia-de-la-mujer-monica-moro.png' class='imgRedonda' />
+            </td>
+            <td>
+              <img src='https://www.cdc.gov/preconception/spanish/images/man-with-arms-crossed.jpg' class='imgRedonda' />
+            </td>
+          </table>
+          <table  border="1"class='tableClass' >
+            <td class='imgTable'>
+            <strong>Vielka Villavicencio</strong>
+            </td>
+            <td class='imgTable'>
+            <strong>Freddy Ponce</strong>
+            </td>
+            <td class='imgTable'>
+            <strong>Kelly Castro</strong>
+            </td>
+            <td class='imgTable'>
+            <strong>Carlos Carvajal</strong>
+            </td>
+            
+          </table>
         </div>
         <div className="flex justify-center">
           <Link to="/">
