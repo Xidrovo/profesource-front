@@ -135,7 +135,7 @@ const FormPage = (props) => {
                     for="ubicacion"
                     class="block text-sm font-medium leading-5 text-gray-700"
                   >
-                    Ubicacion
+                    Ubicación
                   </label>
                   <div class="mt-1 rounded-md shadow-sm">
                     <a
@@ -169,14 +169,13 @@ const FormPage = (props) => {
                 Notificaciones
               </h3>
               <p class="mt-1 text-sm leading-5 text-gray-500">
-                We'll always let you know about important changes, but you pick
-                what else you want to hear about.
+              Siempre le informaremos acerca de cambios importantes, pero usted elige sobre qué quiere saber.
               </p>
             </div>
             <div class="mt-6">
               <fieldset>
                 <legend class="text-base font-medium text-gray-900">
-                  By Email
+                  Vía Email
                 </legend>
                 <div class="mt-4">
                   <div class="relative flex items-start">
@@ -196,7 +195,7 @@ const FormPage = (props) => {
                       </label>
                       <p class="text-gray-500 my-auto">
                         Te notificaremos cuando alguien haya respondido a tu
-                        pulicacion
+                        pulicación
                       </p>
                     </div>
                   </div>
@@ -240,7 +239,7 @@ const FormPage = (props) => {
                           Nuevos grupos
                         </label>
                         <p class="text-gray-500 my-auto">
-                          Te notificaremos cuando haya una actualizacion de
+                          Te notificaremos cuando haya una actualización de
                           nuevos grupos
                         </p>
                       </div>
@@ -250,10 +249,10 @@ const FormPage = (props) => {
               </fieldset>
               <fieldset class="mt-6">
                 <legend class="text-base font-medium text-gray-900">
-                  Push Notifications
+                  Notificaciones Push 
                 </legend>
                 <p class="text-sm leading-5 text-gray-500">
-                  Estos son envios via SMS a tu celular
+                  Estos son envíos vía SMS a tu celular
                 </p>
                 <div class="mt-4">
                   <div class="flex items-center">
