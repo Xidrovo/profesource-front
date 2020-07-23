@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import MagnifierIcon from '@Icons/MagnifierIcon'
 import Fuse from 'fuse.js'
 
 
 const Search_bar = (props) => {
+  const [open, setOpen] = useState(false)
   var list = [{
     username:"cxcarvaj",
     time: "20 min",
@@ -79,8 +80,24 @@ const Search_bar = (props) => {
               class="block w-full h-full pl-8 pr-3 py-2 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 sm:text-sm"
               placeholder="Search"
               type="search"
+              onClick={() => {
+                setOpen(!open)
+              }}
             />
             {console.log(result)}
+            {open && (
+                  <div
+                    className="origin-top-left  left-0 mt-2 w-100 shadow-lg"
+                    onClick={() => {
+                      setOpen(false)
+                    }}
+                  >
+                    <div className="py-1 bg-white shadow-xs">
+                      <h3 class="text-black px-10">hola</h3>
+                      <h3 class="text-black px-10 bt-2 border-opacity-25 border-gray-600">princesa</h3>
+                    </div>
+                  </div>
+                )}
           </div>
         </div>
       </div>
