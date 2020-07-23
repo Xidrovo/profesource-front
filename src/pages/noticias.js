@@ -1,6 +1,6 @@
 import React  from 'react'
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
+import SEO from '@structure_f/seo'
+import Layout from '@structure_f/Layout'
 import UpdateCard from '@components/UpdateCard'
 import AlertIcon from '@Icons/AlertIcon'
 

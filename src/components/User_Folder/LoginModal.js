@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Link } from 'gatsby'
-import UseOnClickOutside from '../hooks/useOnClickOutside'
+import UseOnClickOutside from '../../hooks/UseOnClickOutside'
 
 const LoginModal = (props) => {
   const refLoginModal = useRef()

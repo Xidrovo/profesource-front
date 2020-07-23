@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Iframe from 'react-iframe'
 
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
+import SEO from '@structure_f/seo'
+import Layout from '@structure_f/Layout'
 
 const FormPage = (props) => {
   var LOCATION_KEY = process.env.PROD_KEY

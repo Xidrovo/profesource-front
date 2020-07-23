@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Subject_List from '../components/Subject_List'
-import Message from '../components/Message'
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
-import PostCells from '@components/PostCells'
-import PreComment from '@components/PreComment'
-import Comment from '@components/Comment'
+import Subject_List from '@search_f/Subject_List'
+import Message from '@welcome_m/Message'
+import SEO from '@structure_f/seo'
+import Layout from '@structure_f/Layout'
+import PostCells from '@post_f/PostCells'
+import PreComment from '@comments_f/PreComment'
+import Comment from '@comments_f/Comment'
 
 const PostPage = (props) => {
   return (

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import SEO from '../components/seo'
+import SEO from '@structure_f/seo'
 import AlertIcon from '@Icons/AlertIcon'
-import Layout from '@components/Layout'
-import Stepper from '@components/Stepper'
+import Layout from '@structure_f/Layout'
+import Stepper from '@help/Stepper'
 
 const SecondPage = () => (
   <Layout title="Proceso para publicar contenido en ProfeSource:">

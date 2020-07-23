@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 
-import Subject_List from '../components/Subject_List'
-import Message from '../components/Message'
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
-import PostCells from '@components/PostCells'
-import Post from '@components/Post'
-import Popular from '@components/PopularPost'
+import Subject_List from '@search_f/Subject_List'
+import Message from '@welcome_m/Message'
+import SEO from '@structure_f/seo'
+import Layout from '@structure_f/Layout'
+import PostCells from '@post_f/PostCells'
+import Post from '@post_f/Post'
+import Popular from '@post_f/PopularPost'
 import { Steps } from 'intro.js-react'
 // import 'intro.js/themes/introjs-modern.css'
 import 'intro.js/introjs.css'
-import FilterPost from '../components/FilterPost'
-import Footer from '../components/Footer'
+import FilterPost from '@search_f/FilterPost'
+import Footer from '@structure_f/Footer'
 
 const IndexPage = () => {
   const [escrito, setEscrito] = useState('')

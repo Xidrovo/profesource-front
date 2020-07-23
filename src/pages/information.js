@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
-import Cards from '../components/Cards'
+import SEO from '@structure_f/seo'
+import Layout from '@structure_f/Layout'
+import Cards from '@components/Cards'
 
 const Information = (props) => (
   <Layout title="Nosotros" class="center">

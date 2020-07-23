@@ -1,6 +1,6 @@
 import React from 'react'
 import ImageIcon from '@Icons/ImageIcon'
-import Button from '@components/Button'
+import Button from '@buttons_f/Button'
 import { Link } from 'gatsby'
 
 const PreComment = (props) => {

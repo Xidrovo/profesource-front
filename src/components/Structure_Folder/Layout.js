@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
-import Search_bar from '@components/Search_bar'
+import Search_bar from '@search_f/Search_bar'
 import NotificactionIcon from '@Icons/NotificationIcon'
-import UseOnClickOutside from '../hooks/UseOnClickOutside'
-import LoginModal from '@components/LoginModal'
-import Footer from '../components/Footer'
+import UseOnClickOutside from '../../hooks/UseOnClickOutside'
+import LoginModal from '@user_f/LoginModal'
+import Footer from '@structure_f/Footer'
 
 const Layout = (props) => {
   const [currentNav, setCurrentNav] = useState('/')

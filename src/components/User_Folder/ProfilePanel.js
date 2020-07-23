@@ -1,5 +1,5 @@
 import React from 'react'
-import CellContent from '@components/CellContent'
+import CellContent from '@post_f/CellContent'
 
 const ProfilePanel = (props) => {
   const [openTab, setOpenTab] = React.useState(1)

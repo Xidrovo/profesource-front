@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import CommentIcon from '@Icons/CommentIcon'
 import FavIcon from '@Icons/FavIcon'
-import SubComment from './SubComment'
+import SubComment from '@comments_f/SubComment'
 
 const Comment = (props) => {
   let subcommentarios = {

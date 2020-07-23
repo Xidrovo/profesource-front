@@ -1,8 +1,8 @@
 import React from 'react'
-import ProfileCard from '@components/profileCard'
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
-import ProfilePanel from '@components/ProfilePanel'
+import ProfileCard from '@user_f/profileCard'
+import SEO from '@structure_f/seo'
+import Layout from '@structure_f/Layout'
+import ProfilePanel from '@user_f/ProfilePanel'
 
 const ProfilePage = (props) => {
   return (

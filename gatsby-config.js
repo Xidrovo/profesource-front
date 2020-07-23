@@ -46,7 +46,15 @@ module.exports = {
       options: {
         alias: {
           '@components': 'src/components',
-          '@Icons': 'src/Icons',
+          '@buttons_f': 'src/components/Buttons_Folder',
+          '@comments_f': 'src/components/Comments_Folder',
+          '@help': 'src/components/Help',
+          '@post_f': 'src/components/Post_Folder',
+          '@search_f': 'src/components/Search_Folder',
+          '@structure_f': 'src/components/Structure_Folder',
+          '@user_f': 'src/components/User_Folder',
+          '@welcome_m': 'src/components/Welcome_Message',
+          '@Icons': 'src/Icons'
         },
         extensions: ['js'],
       },

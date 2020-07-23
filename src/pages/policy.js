@@ -1,6 +1,6 @@
 import React  from 'react'
-import SEO from '../components/seo'
-import Layout from '@components/Layout'
+import SEO from '@structure_f/seo'
+import Layout from '@structure_f/Layout'
 
 const Policy = (props) => {
     return(
@@ -9,7 +9,7 @@ const Policy = (props) => {
                 <SEO title="Políticas" />
                 <div className="px-6">
                     <div className="mt-8 border-t border-gray-200 pt-8">
-                        <div className=" border-2 border-opacity-50 border-gray-600 px-3 py-4 px-4 md:px-8">
+                        <div className="rounded-lg border-2 border-opacity-50 border-gray-600 px-3 py-4 px-4 md:px-8">
 
                             <p className="text-xs md:text-base font-normal text-justify text-blue-103 mb-4">
                             Profesource respeta la privacidad de nuestros usuarios. Esta Política explica cómo usamos, 
