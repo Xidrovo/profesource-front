@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import CommentIcon from '@Icons/CommentIcon'
 import FavIcon from '@Icons/FavIcon'
 import TagIcon from '@Icons/TagIcon'
 
 function PostCells(props) {
-  const [escrito, setEscrito] = useState('')
-  const handleInput = (evt) => {
-    const { target } = evt
-    const { value } = target
+  // const [escrito, setEscrito] = useState('')
+  // const handleInput = (evt) => {
+  //   const { target } = evt
+  //   const { value } = target
 
-    setEscrito(value)
-  }
+  //   setEscrito(value)
+  // }
 
   return (
     <div className="md:ml-24 mb-20 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12">
@@ -33,7 +33,13 @@ function PostCells(props) {
 
       <div className="mx-4 my-8">
         <h2 className="text-blue-102 font-bold">{props.title}</h2>
-        <input
+        <div className="text-justify">
+          <p className="pl-6 pr-6 font-normal text-black text-opacity-75">
+            {props.post}
+          </p>
+        </div>
+
+        {/* <input
           className="break-all text-blue-103 font-normal"
           placeholder="Aquí va tu post"
           onChange={handleInput}
@@ -42,7 +48,7 @@ function PostCells(props) {
           <p className="break-all text-blue-103 font-normal">
             Tú post está aquí: {escrito}
           </p>
-        )}
+        )} */}
       </div>
 
       <div className="flex my-0 space-x-10 bg-gray-101">
