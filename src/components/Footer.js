@@ -53,14 +53,14 @@ const Footer = (props) => {
                 border-b px-2 pb-2 md:py-2 w-full md:border-none md:w-56"
           >
             <div>
-              <Link className="md:hidden" to="/noticias/">Actualizaciones</Link>
+              <Link className="md:hidden" to="/noticias/">Noticias</Link>
               <a className="hidden md:block">Sobre el Sitio</a>
               <ul className="my-2 text-xs hidden md:block">
                 <li className="hover:text-blue-101 hover:font-semibold mb-2 text-blue-103 font-normal">
-                  <Link to="/noticias/">Actualizaciones</Link>
+                  <Link to="/noticias/">Noticias</Link>
                 </li>
                 <li className="hover:text-blue-101 hover:font-semibold mb-2 text-blue-103 font-normal">
-                  <Link to="/noticias/">Políticas</Link>
+                  <Link to="/policy/">Políticas</Link>
                 </li>
               </ul>
             </div>
@@ -73,7 +73,7 @@ const Footer = (props) => {
                 border-b px-2 pb-2 md:py-2 w-full md:border-none md:w-56"
           >
               <div>
-              <Link className="md:hidden" to="/noticias/">Políticas</Link>
+              <Link className="md:hidden" to="/policy/">Políticas</Link>
               </div>
           </section>
 
