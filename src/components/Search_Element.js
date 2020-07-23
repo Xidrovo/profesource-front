@@ -7,12 +7,12 @@ const Search_Element = (props) => {
       <Link
       to="/viewPost/"
       >
-    <div className="mb-5 w-auto hover:text-blue-700" >
-      <div className="h-5">
-        <span className="xl:text-sm text-xs pl-4">{props.title}</span>
+    <div className="mb-1 w-auto hover:text-blue-700 border-2" >
+      <div className="pl-4">
+        <span className="xl:text-sm text-xs font-bold">{props.title}</span>
       </div>
-      <div className="h-5 pl-4">
-        <span className="xl:text-sm text-xs  text-opacity-75">{props.tags}</span>
+      <div className="pl-4">
+        <span className="xl:text-sm text-xs opacity-50">{props.tags}</span>
       </div>
     </div>
     </Link>

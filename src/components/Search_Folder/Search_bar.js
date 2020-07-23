@@ -86,7 +86,7 @@ const Search_bar = (props) => {
     }
     
   return (
-    <div class="pr-8 flex justify-between my-4 ml-8 w-1/2">
+    <div class="pr-8 flex justify-between my-4 ml-8 w-6/12">
       <div class="flex-1 flex">
         <div class="w-full flex md:ml-0" ref={ref}>
           <label for="search_field" class="sr-only">
@@ -117,7 +117,7 @@ const Search_bar = (props) => {
                   <div
                     className="origin-top-left left-0 mt-4 w-100 shadow-lg"
                   >
-                    <div className="py-1 bg-white text-black hover:border-black">
+                    <div className="pt-1 bg-white text-black hover:border-2">
                     {presentarElements()}
                     </div>
                   </div>

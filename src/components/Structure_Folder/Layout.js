@@ -83,7 +83,7 @@ const Layout = (props) => {
               </div>
               {/* <Search_bar/> */}
             </div>
-            <Search_bar />
+            <Search_bar/>
             <div className="hidden sm:ml-6 sm:flex sm:items-center">
               <button
                 className="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:text-gray-500 focus:bg-gray-100 transition duration-150 ease-in-out"
