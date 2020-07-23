@@ -4,15 +4,15 @@ import { Link } from 'gatsby'
 const Footer = (props) => {
   return (
     <div className="border-t md:px-4 bg-gray-101">
-      <div class="max-w-screen-lg md:flex  mx-auto px-4 pt-2">
-        <div className="flex flex-col items-center pr-4 pb-2 md:py-2 space-y-2 md:w-64">
+      <div class="max-w-screen-lg md:flex  mx-auto px-2 pt-2">
+        <div className="flex flex-col justify-start items-center  pr-4 pb-2 md:py-2 space-y-2 md:w-64">
           <h2 className="text-blue-900 text-base font-semibold">Profesource</h2>
           <img
             class="rounded-lg w-12 hidden md:block"
             src="https://images.unsplash.com/photo-1579783483458-83d02161294e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=428&q=80"
           />
         </div>
-        <div class="flex flex-wrap sm:w-3/12 w-1/2">
+        <div class="flex flex-wrap md:w-3/12 w-11/12">
           <section
             class="text-blue-900 text-xs font-semibold md:text-base  
                 border-b px-2 pb-2 md:py-2 w-full md:border-none md:w-56"
@@ -31,7 +31,7 @@ const Footer = (props) => {
             </ul>
           </section>
         </div>
-        <div class="flex flex-wrap w-3/12">
+        <div class="flex flex-wrap w-11/12 md:w-3/12">
           <section
             class="text-blue-900 text-xs font-semibold md:text-base  
                 border-b px-2 pb-2 md:py-2 w-full md:border-none md:w-56 "
@@ -47,24 +47,39 @@ const Footer = (props) => {
             </ul>
           </section>
         </div>
-        <div class="flex flex-wrap w-3/12">
+        <div class="flex flex-wrap w-11/12 md:w-3/12">
           <section
             class="text-blue-900 text-xs  font-semibold md:text-base
                 border-b px-2 pb-2 md:py-2 w-full md:border-none md:w-56"
           >
             <div>
-              <Link className="md:hidden">Noticias</Link>
-              <a className="hidden md:block">Noticias</a>
+              <Link className="md:hidden" to="/noticias/">Actualizaciones</Link>
+              <a className="hidden md:block">Sobre el Sitio</a>
               <ul className="my-2 text-xs hidden md:block">
                 <li className="hover:text-blue-101 hover:font-semibold mb-2 text-blue-103 font-normal">
-                  <Link>Ver actualizaciones</Link>
+                  <Link to="/noticias/">Actualizaciones</Link>
+                </li>
+                <li className="hover:text-blue-101 hover:font-semibold mb-2 text-blue-103 font-normal">
+                  <Link to="/noticias/">Políticas</Link>
                 </li>
               </ul>
             </div>
           </section>
         </div>
 
-        <div class="flex flex-wrap w-1/12">
+        <div class="flex flex-wrap w-11/12 md:hidden">
+          <section
+            class="text-blue-900 text-xs  font-semibold md:text-base
+                border-b px-2 pb-2 md:py-2 w-full md:border-none md:w-56"
+          >
+              <div>
+              <Link className="md:hidden" to="/noticias/">Políticas</Link>
+              </div>
+          </section>
+
+        </div>
+
+        <div class="flex flex-wrap w-11/12 md:w-1/12">
           <section
             class="text-blue-900 text-xs  font-semibold md:text-base
                 border-b px-2 pb-2 md:py-2 w-full md:border-none md:w-32"
