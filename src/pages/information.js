@@ -64,7 +64,7 @@ const Information = (props) => (
           <Cards
             title="Desarrolador Web - FrontEnd"
             description=""
-            img="https://www.marketingdirecto.com/wp-content/uploads/2020/03/dia-de-la-mujer-monica-moro.png"
+            img="https://i.postimg.cc/RZdzXTFP/profilepicturev2.jpg"
             name="Kelly Castro Figueroa"
             email="keescast@espol.edu.ec"
           />
@@ -85,7 +85,7 @@ const Information = (props) => (
           <Cards
             title="Desarrolador Web - FrontEnd"
             description=""
-            img="https://dam.vanidades.com/wp-content/uploads/2019/04/900katiebouman-770x513.jpg"
+            img="https://i.postimg.cc/pXv74n33/profilepicturev2.jpg"
             name="Vielka Villavicencio Vallejo"
             email="vvvillav@espol.edu.ec"
           />
