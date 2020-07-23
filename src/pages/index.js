@@ -12,7 +12,7 @@ import { Steps } from 'intro.js-react'
 // import 'intro.js/themes/introjs-modern.css'
 import 'intro.js/introjs.css'
 import FilterPost from '@search_f/FilterPost'
-import Footer from '@structure_f/Footer'
+
 
 const IndexPage = () => {
   const [escrito, setEscrito] = useState('')
@@ -59,6 +59,41 @@ const IndexPage = () => {
     setDidMount(true)
   }, [])
 
+  var list = [{
+    username:"cxcarvaj",
+    time: "20 min",
+    title: "mi primer post en profesource",
+    desc: "Hola, mi nombre es Carlos Carvajal y este es mi primer post desde profesource!",
+    favs: "10",
+    comments:"5",
+    tags:["DAWM, "," Computer Science, "," ESPOL "]
+  },
+  {
+    username:"fponce",
+    time: "10 horas",
+    title: "Problemas en DAWM",
+    desc: "Alguien conoce lugares donde pueda aprender JS, html y CSS? Seria de gran ayuda que me compartieran esta información! Gracias",
+    favs: "5",
+    comments:"10",
+    tags:["DAWM, "," ESPOL"]
+  },
+  {
+    username:"kcastro",
+    time: "5 horas",
+    title: "Duda sobre un ejercicio de estadística :(",
+    desc: "Hola chicos, disculpen es que tengo una duda con un ejercico de estadística inferencial y no sé si me puedan ayudar!",
+    favs: "12",
+    comments:"20",
+    tags:["Estadística, ","ESPOL, ", " Inferencial"]
+  },
+    ]
+
+    function presentarPosts(){
+      return list.map((obj,i)=>{
+        return <PostCells username={obj.username} time={obj.time} title={obj.title} 
+        desc = {obj.desc} favs={obj.favs} comments={obj.comments} tags={obj.tags}/>
+      })
+    }
   return (
     <div>
       {didMount && (
@@ -98,14 +133,8 @@ const IndexPage = () => {
             <div className="postCell">
               <div className="pb-16">
                 <FilterPost></FilterPost>
-                <PostCells
-                  username="cxcarvajal"
-                  time="20 horas"
-                  title="Mi Primer Post en ProfeSource!"
-                  favs="10"
-                  comments="5"
-                  tag="Dawm"
-                />
+                {presentarPosts()}
+               
               </div>
             </div>
 

@@ -35,7 +35,7 @@ function PostCells(props) {
         <h2 className="text-blue-102 font-bold">{props.title}</h2>
         <div className="text-justify">
           <p className="pl-6 pr-6 font-normal text-black text-opacity-75">
-            {props.post}
+            {props.desc}
           </p>
         </div>
 
@@ -89,7 +89,7 @@ function PostCells(props) {
               />
 
               <span className="flex-shrink break-all text-blue-101 font-bold ">
-                {props.tag}
+                {props.tags}
               </span>
             </Link>
           </button>
