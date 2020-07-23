@@ -62,28 +62,28 @@ const Information = (props) => (
       <div class="rounded-b-lg border-2 border-opacity-25 border-gray-600 p-3 mb-6">
         <div class="grid grid-flow-col grid-cols-1 xl:grid-cols-4 xl:grid-rows-1 grid-rows-4 gap-4 p-6">
           <Cards
-            title="Desarrolador Web"
+            title="Desarrolador Web - FrontEnd"
             description=""
             img="https://www.marketingdirecto.com/wp-content/uploads/2020/03/dia-de-la-mujer-monica-moro.png"
             name="Kelly Castro Figueroa"
             email="keescast@espol.edu.ec"
           />
           <Cards
-            title="Desarrolador Web"
+            title="Desarrolador Web - FrontEnd"
             description=""
-            img="https://www.cdc.gov/preconception/spanish/images/man-with-arms-crossed.jpg"
+            img="https://i.postimg.cc/05hjbVC4/me.jpg"
             name="Carlos Carvajal Villegas"
             email="cxcarvaj@espol.edu.ec"
           />
           <Cards
-            title="Desarrolador Web"
+            title="Desarrolador Web - FrontEnd"
             description=""
-            img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS_uRqSEPeElYHOyR8_6opHrtKg-n7zpjihUA&usqp=CAU"
+            img="https://i.postimg.cc/T2s4CDQV/c240d0d1-5abe-4d82-8abe-c263546fd03e.jpg"
             name="Freddy Ponce Muzzio"
             email="fponce@espol.edu.ec"
           />
           <Cards
-            title="Desarrolador Web"
+            title="Desarrolador Web - FrontEnd"
             description=""
             img="https://dam.vanidades.com/wp-content/uploads/2019/04/900katiebouman-770x513.jpg"
             name="Vielka Villavicencio Vallejo"

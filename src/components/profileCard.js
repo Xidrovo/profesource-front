@@ -8,8 +8,8 @@ const ProfileCard = (props) => {
       <div className="flex justify-center items-center">
         <img
           className="h-30 rounded-md ml-3 my-2 md:rounded-t-lg md:rounded-b-none md:w-64 md:m-0"
-          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
+          src="https://i.postimg.cc/F1XX4WLd/me.jpg"
+          alt="profile-picture"
         />
       </div>
       <div className="flex-col items-center justify-start space-y-3 m-4">

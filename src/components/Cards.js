@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cards = (props) => {
   return (
-    <div class="relative overflow-hidden mb-8 w-1/2">
+    <div class="relative overflow-hidden mb-8 w-100">
       <div class="rounded-l rounded-r hover:border-blue-900 border-l border-r border-t border-b border-gray-400 lg:border-l lg:border-t lg:border-gray-400 bg-white lg:rounded-b lg:rounded-l lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div class="mb-8">
           <div class="text-gray-900 font-bold text-xl mb-2">{props.title}</div>
