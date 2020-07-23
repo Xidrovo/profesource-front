@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby'
 
 import Subject_List from '@search_f/Subject_List'
 import Message from '@welcome_m/Message'
@@ -62,7 +61,7 @@ const IndexPage = () => {
   var list = [{
     username:"cxcarvaj",
     time: "20 min",
-    title: "mi primer post en profesource",
+    title: "Mi primer post en profesource",
     desc: "Hola, mi nombre es Carlos Carvajal y este es mi primer post desde profesource!",
     favs: "10",
     comments:"5",
@@ -133,8 +132,7 @@ const IndexPage = () => {
             <div className="postCell">
               <div className="pb-16">
                 <FilterPost></FilterPost>
-                {presentarPosts()}
-               
+                {presentarPosts()}               
               </div>
             </div>
 

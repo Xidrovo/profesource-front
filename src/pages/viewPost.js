@@ -11,7 +11,7 @@ import Comment from '@comments_f/Comment'
 const PostPage = (props) => {
   return (
     <Layout title={props.title}>
-      <SEO title={props.title} />
+      <SEO title="Post" />
 
       <div class="float-right w-64 column hidden lg:block">
         <div className="message bg">
@@ -27,12 +27,13 @@ const PostPage = (props) => {
         <div className=" text-4xl font-bold text-gray-800  justify-around ">
           <div>
             <PostCells
-              username="cxcarvajal"
-              time="20 horas"
-              title="Mi Primer Post en ProfeSource!"
+              username="cxcarvaj"
+              time="20 min"
+              title="Mi primer post en profesource"
+              desc="Hola, mi nombre es Carlos Carvajal y este es mi primer post desde profesource!"
               favs="10"
               comments="5"
-              tag="Dawm"
+              tags={['DAWM, ', ' Computer Science, ', ' ESPOL ']}
             />
           </div>
           <div>

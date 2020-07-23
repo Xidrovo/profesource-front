@@ -1,14 +1,23 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import MagnifierIcon from '@Icons/MagnifierIcon'
 import Fuse from 'fuse.js'
+import Search_Element from '../Search_Element'
+import UseOnClickOutside from '../../hooks/UseOnClickOutside'
+
 
 
 const Search_bar = (props) => {
   const [open, setOpen] = useState(false)
+  const [escrito, setValue] = useState('')
+  const ref = useRef()
+  UseOnClickOutside(ref, () => setOpen(false))
+
+
+
   var list = [{
     username:"cxcarvaj",
     time: "20 min",
-    title: "mi primer post en profesource",
+    title: "Mi primer post en profesource",
     desc: "Hola, mi nombre es Carlos Carvajal y este es mi primer post desde profesource!",
     favs: "10",
     comments:"5",
@@ -55,12 +64,31 @@ const Search_bar = (props) => {
     const fuse = new Fuse(list, options);
     
     // Change the pattern
-    const pattern = "cxc"
-    const result = fuse.search(pattern)
+    useEffect(() => {
+      presentarElements()
+    }, [escrito])
+
+    const result = fuse.search(escrito)
+
+    function presentarElements(){
+      return result.map((obj,i)=>{
+        return (<div key={i}>
+        <Search_Element title={obj.item.title} tags={obj.item.tags}/>
+        </div>
+        )
+      })
+    }
+    const handleChange = (evt) =>{
+      const {target} = evt;
+      const {value} = target;
+
+      setValue(value)
+    }
+    
   return (
     <div class="pr-8 flex justify-between my-4 ml-8 w-1/2">
       <div class="flex-1 flex">
-        <div class="w-full flex md:ml-0">
+        <div class="w-full flex md:ml-0" ref={ref}>
           <label for="search_field" class="sr-only">
             Search
           </label>
@@ -83,18 +111,14 @@ const Search_bar = (props) => {
               onClick={() => {
                 setOpen(!open)
               }}
+              onChange={handleChange}
             />
-            {console.log(result)}
             {open && (
                   <div
-                    className="origin-top-left  left-0 mt-2 w-100 shadow-lg"
-                    onClick={() => {
-                      setOpen(false)
-                    }}
+                    className="origin-top-left left-0 mt-4 w-100 shadow-lg"
                   >
-                    <div className="py-1 bg-white shadow-xs">
-                      <h3 class="text-black px-10">hola</h3>
-                      <h3 class="text-black px-10 bt-2 border-opacity-25 border-gray-600">princesa</h3>
+                    <div className="py-1 bg-white text-black hover:border-black">
+                    {presentarElements()}
                     </div>
                   </div>
                 )}
