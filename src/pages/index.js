@@ -65,7 +65,7 @@ const IndexPage = () => {
     desc: "Hola, mi nombre es Carlos Carvajal y este es mi primer post desde profesource!",
     favs: "10",
     comments:"5",
-    tags:["DAWM, "," Computer Science, "," ESPOL "]
+    tags:["ESPOL"]
   },
   {
     username:"fponce",
@@ -74,7 +74,7 @@ const IndexPage = () => {
     desc: "Alguien conoce lugares donde pueda aprender JS, html y CSS? Seria de gran ayuda que me compartieran esta información! Gracias",
     favs: "5",
     comments:"10",
-    tags:["DAWM, "," ESPOL"]
+    tags:["DAWM"]
   },
   {
     username:"kcastro",
@@ -83,7 +83,7 @@ const IndexPage = () => {
     desc: "Hola chicos, disculpen es que tengo una duda con un ejercico de estadística inferencial y no sé si me puedan ayudar!",
     favs: "12",
     comments:"20",
-    tags:["Estadística, ","ESPOL, ", " Inferencial"]
+    tags:["Tarea"]
   },
     ]
 

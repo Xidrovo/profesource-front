@@ -27,6 +27,14 @@ const Information = (props) => (
             proyecto que permita a los estudiantes adquirir conocimientos
             brindandoles material de apoyo.
           </p>
+          <p class="px-5 pt-2 text-justify">
+            Profesource es un entorno de ayuda académica, donde se encuentra material 
+            de estudio, e incluso un foro para diversos temas sobre los cuales existan
+            dudas en cuestión de comprensión de tal forma que puedes publicar alguna 
+            pregunta sobre algún ejercicio o tema en especifico, la cual será respondida 
+            por la comunidad, dichas respuestas tendrán una puntuación que será 
+            otorgada conforme a su retroalimentación. 
+          </p>
         </div>
         <div class="px-5 grid grid-flow-col grid-cols-1 xl:grid-cols-2 xl:grid-rows-1 grid-rows-2 gap-4 p-6">
           <div class="mb-5 w-100">
