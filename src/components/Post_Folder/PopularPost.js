@@ -8,7 +8,7 @@ const PopularPost = () => {
         <div className="flex justify-center md:float-right">
           <img
             class=" rounded-lg h-24 mx-2 md:ml-4 my-5"
-            src="https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80https://imgur.com/a/0Jlvibw"
+            src="https://i.postimg.cc/bvNRFSRf/1-hm7o-U-SULRne-UVZijmo-VFQ.png"
             alt="popularPostImg"
           />
         </div>
