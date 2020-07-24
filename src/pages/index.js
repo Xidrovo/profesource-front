@@ -35,23 +35,23 @@ const IndexPage = () => {
     },
     {
       element: '.message',
-      intro: 'Message Component',
+      intro: '¿Qué es Profesource?',
     },
     {
       element: '.subject',
-      intro: 'Subject Component',
+      intro: '¡Aquí encontrarás el listado de materias con material de estudio!',
     },
     {
       element: '.popular',
-      intro: 'Popular Post',
+      intro: '¡Este el post más popular de la página!',
     },
     {
       element: '.post',
-      intro: 'Post Component',
+      intro: '¡Aquí puedes escribir y subir tu duda o ejercicio a la página!',
     },
     {
       element: '.postCell',
-      intro: 'PostCell Component',
+      intro: 'En esta parte, encontrarás los posts existentes de la página',
     },
   ])
   useEffect(() => {
