@@ -27,9 +27,10 @@ const Post = (props) => {
               width="15px"
               color={'#52658f'}
             />
-            <span className="text-blue-101 font-semibold text-sm">
-              {props.tag}
-            </span>
+            <select className="materia text-blue-101 font-semibold text-sm">
+              <option>Materia</option>
+              <option>Dawm</option>
+            </select>
           </button>
         </div>
         <div className="flex mx-6 mb-4 align-middle">
