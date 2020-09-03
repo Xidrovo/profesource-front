@@ -24,7 +24,7 @@ const FormPage = (props) => {
     e.preventDefault();
     axios({
       method: "POST", 
-      url:"http:localhost:3000/form/post", 
+      url:"http://localhost:3000/api/send", 
       data:  info
     }).then((response)=>{
       if (response.data.status === 'success'){
@@ -162,7 +162,9 @@ const FormPage = (props) => {
                       class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                       onChange={handleInputChange}
                     >
+                      <option>Seleccione</option>
                       <option>Villaclub</option>
+                      <option>La Joya</option>
                       <option>Guasmo</option>
                       <option>Florida</option>
                       <option>Sauces</option>

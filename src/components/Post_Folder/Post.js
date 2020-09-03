@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import TagIcon from '@Icons/TagIcon'
 import ImageIcon from '@Icons/ImageIcon'
 import Button from '@buttons_f/Button'
@@ -7,6 +7,7 @@ import axios from 'axios'
 
 const Post = (props) => {
   const [subjects, setSubject] = useState([])
+  const [didMount, setDidMount] = useState(false)
 
   useEffect(()=>{
     axios
@@ -17,31 +18,24 @@ const Post = (props) => {
     .catch((error)=>{
       console.log(error)
     })
-  }, [])
+    setDidMount(true)
+  },[])
 
-  function presentarMaterias(){
-    return subjects.map((subject)=>{
-      return(
-        <option>{subject.Sobject_name}</option>
-      )
-    })
-  }
 
   const [info, setDatos] = useState({
     id_Post:'',
     Tittle: '',
     username: '',
-    Sobject_name: '',
+    Subject_name: '',
     Punctuation: '',
     Publication_date: '',
     created_at: '',
     updated_at: ''
   })
   const removeData = (id_Post) => {
-
     axios.delete(`${id_Post}`).then(res => {
         const del = info.filter(inf => id_Post !== inf.id_Post)
-        setEmployees(del)
+        setDatos(del)
     })
 }
  
@@ -59,9 +53,22 @@ const Post = (props) => {
   }
  
   const handleInputChange = (event) =>{
-    setDatos({
-      ...info,
-      [event.target.id]: event.target.value
+    // setDatos({
+    //   ...info,
+    //   [event.target.id]:event.target.value
+    // })
+    // console.log("handelInput")
+  }
+
+
+  const loadSubjects = () => {
+    console.log("loadSubjects")
+    document.getElementById('Subject_name').innerHTML=`<option>Tag</option>`
+    return subjects.map((subject, i) => {
+      var option = document.createElement('option')
+      var sub = document.createTextNode(subject.Subject_name)
+      option.appendChild(sub)
+      document.getElementById('Subject_name').appendChild(option)
     })
   }
   return (
@@ -88,9 +95,8 @@ const Post = (props) => {
               width="15px"
               color={'#52658f'}
             />
-            <select className="materia text-blue-101 font-semibold text-sm" id="Sobject_name" onChange={handleInputChange}>
-              <option> </option>
-              {presentarMaterias()}
+            <select className="materia text-blue-101 font-semibold text-sm" id="Subject_name" onChange={handleInputChange}>
+            {didMount && loadSubjects()}
             </select>
           </button>
         </div>
