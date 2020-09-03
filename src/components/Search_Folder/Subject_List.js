@@ -3,39 +3,22 @@ import AssignmentIcon from '@Icons/AssignmentIcon'
 import axios from 'axios'
 
 const Subject_List = () => {
-  /*let materias = {
-    nombre: ['Quimica', 'Cálculo I', 'Física III', 'Comunicación'],
-    cantidad: ['324', '309', '259', '103'],
-  }
 
-  const [materias, setDatos] = useState([])
+  const [subjects, setSubject] = useState([])
 
-  async function getSubject() {
-    try {
-      const response = await axios.get('http://localhost:3000/api/subjects/consult');
-      setDatos(response.data)
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  getSubject()
-  
-  
-  useEffect(async () => {
-    console.log(materias)
-    const result = await axios.get(
-      ''
-    )
-    setDatos(result.data)
+  useEffect(()=>{
+    axios
+    .get('http://localhost:3000/api/subjects/consult')
+    .then((response)=>{
+      setSubject(response.data)
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
   }, [])
-*/
-
-  //var materias=[].push(axios.get(''))
-  var materias = ['dawm', 'matematicas'] //axios.get('')
 
   function presentarMaterias(){
-    return materias.map((materia, i) => {
+    return subjects.map((subject, i) => {
       return (
         <tr>
           <td class="w-1/12">
@@ -46,7 +29,7 @@ const Subject_List = () => {
               height="20px"
             />
           </td>
-          <td class="text-left w-1/2">{materia}</td>
+          <td class="text-left w-1/2">{subject.Subject_name}</td>
         </tr>
       )
     })

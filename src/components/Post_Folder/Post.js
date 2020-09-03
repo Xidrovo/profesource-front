@@ -6,12 +6,23 @@ import axios from 'axios'
 
 
 const Post = (props) => {
-  var materias = ['dawm','matematicas']
+  const [subjects, setSubject] = useState([])
+
+  useEffect(()=>{
+    axios
+    .get('http://localhost:3000/api/subjects/consult')
+    .then((response)=>{
+      setSubject(response.data)
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+  }, [])
 
   function presentarMaterias(){
-    return materias.map((materia,i)=>{
+    return subjects.map((subject)=>{
       return(
-        <option>{materia}</option>
+        <option>{subject.Sobject_name}</option>
       )
     })
   }
@@ -78,7 +89,7 @@ const Post = (props) => {
               color={'#52658f'}
             />
             <select className="materia text-blue-101 font-semibold text-sm" id="Sobject_name" onChange={handleInputChange}>
-              <option>Materia</option>
+              <option> </option>
               {presentarMaterias()}
             </select>
           </button>
