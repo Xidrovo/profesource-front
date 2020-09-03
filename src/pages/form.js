@@ -4,13 +4,49 @@ import Iframe from 'react-iframe'
 
 import SEO from '@structure_f/seo'
 import Layout from '@structure_f/Layout'
+import axios from 'axios'
 
 const FormPage = (props) => {
   var LOCATION_KEY = process.env.PROD_KEY
+
+  const [info, setDatos] = useState({
+    first_name:'',
+    last_name: '',
+    cell_phone: '',
+    email: '',
+    detail: '',
+    zone: ''
+  })
+
+  const handleSubmit = (e) => {
+    console.log("enviando")
+    console.log(info)
+    e.preventDefault();
+    axios({
+      method: "POST", 
+      url:"http:localhost:3000/form/post", 
+      data:  info
+    }).then((response)=>{
+      if (response.data.status === 'success'){
+        alert("Message Sent."); 
+      }else if(response.data.status === 'fail'){
+        alert("Message failed to send.")
+      }
+    })
+  }
+
+  const handleInputChange = (event) =>{
+    setDatos({
+      ...info,
+      [event.target.id]: event.target.value
+    })
+  }
+
+  const { first_name, last_name, cell_phone, email, detail, zone } = info
   return (
     <Layout title="Contáctanos">
       <SEO title="Contáctanos" />
-      <form>
+      <form id="contact-form" onSubmit={handleSubmit} method="POST">
         <div class="px-6">
           <div class="mt-8 border-t border-gray-200 pt-8">
             <div class="rounded-t-lg border-2 border-opacity-25 border-gray-600 p-3 bg-gray-800">
@@ -34,6 +70,7 @@ const FormPage = (props) => {
                   <input
                     id="first_name"
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -49,21 +86,23 @@ const FormPage = (props) => {
                   <input
                     id="last_name"
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
 
               <div class="sm:col-span-4">
                 <label
-                  for="cell-phone"
+                  for="cell_phone"
                   class="block text-sm font-medium leading-5 text-gray-700"
                 >
                   Celular
                 </label>
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
-                    id="cell-phone"
+                    id="cell_phone"
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -80,6 +119,7 @@ const FormPage = (props) => {
                     id="email"
                     type="email"
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -97,6 +137,7 @@ const FormPage = (props) => {
                     rows="10"
                     cols="50"
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -117,8 +158,9 @@ const FormPage = (props) => {
                   </label>
                   <div class="mt-1 rounded-md shadow-sm">
                     <select
-                      id="zona"
+                      id="zone"
                       class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                      onChange={handleInputChange}
                     >
                       <option>Villaclub</option>
                       <option>Guasmo</option>
