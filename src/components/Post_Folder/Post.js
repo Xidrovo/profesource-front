@@ -1,21 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TagIcon from '@Icons/TagIcon'
 import ImageIcon from '@Icons/ImageIcon'
 import Button from '@buttons_f/Button'
+import axios from 'axios'
+
 
 const Post = (props) => {
+  var materias = ['dawm','matematicas']
+
+  function presentarMaterias(){
+    return materias.map((materia,i)=>{
+      return(
+        <option>{materia}</option>
+      )
+    })
+  }
+
+  const [info, setDatos] = useState({
+    id_Post:'',
+    Tittle: '',
+    username: '',
+    Sobject_name: '',
+    Punctuation: '',
+    Publication_date: '',
+    created_at: '',
+    updated_at: ''
+  })
+  const removeData = (id_Post) => {
+
+    axios.delete(`${id_Post}`).then(res => {
+        const del = info.filter(inf => id_Post !== inf.id_Post)
+        setEmployees(del)
+    })
+}
+ 
+  const handleSubmit = (e) => {
+    console.log("enviando")
+    console.log(info)
+    e.preventDefault();
+    axios.post('',info).then((response)=>{
+      if (response.data.status === 'success'){
+        alert("Message Sent."); 
+      }else if(response.data.status === 'fail'){
+        alert("Message failed to send.")
+      }
+    })
+  }
+ 
+  const handleInputChange = (event) =>{
+    setDatos({
+      ...info,
+      [event.target.id]: event.target.value
+    })
+  }
   return (
-    <div className="md:ml-24 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-8 rounded-lg">
+    /* agregar */
+    <div className="md:ml-24 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-8 rounded-lg"  >
       <div className="mx-6 my-4">
-        <h2 className="text-blue-102 font-bold">{props.title}</h2>
         <div class="box__title bg-grey-lighter px-3 py-2 border-b">
-          <h3 class="text-md text-grey-darker font-medium">Título</h3>
+          <input class="text-md text-grey-darker font-medium" placeholder="Titulo" id="Tittle" onChange={handleInputChange}></input>
         </div>
         <textarea
           id="text-area-post"
           placeholder="¿Deseas postear algo?"
           class=" w-full border-2 text-grey-darkest flex-1 p-1 bg-transparent resize-none max-w-full border-l-4"
           rows="6"
+          onChange={handleInputChange}
         ></textarea>
       </div>
 
@@ -27,9 +77,9 @@ const Post = (props) => {
               width="15px"
               color={'#52658f'}
             />
-            <select className="materia text-blue-101 font-semibold text-sm">
+            <select className="materia text-blue-101 font-semibold text-sm" id="Sobject_name" onChange={handleInputChange}>
               <option>Materia</option>
-              <option>Dawm</option>
+              {presentarMaterias()}
             </select>
           </button>
         </div>
@@ -49,11 +99,7 @@ const Post = (props) => {
         {/* <Button indicator="Publicar" onClick={()=>{alert('Publicación exitosa')}}/> */}
         <Button
           indicator="Publicar"
-          onClick={() => {
-            var postMessage = document.getElementById('text-area-post').value
-            alert(postMessage)
-            document.getElementById('text-area-post').value = ''
-          }}
+          onClick={handleSubmit}
         />
       </div>
     </div>

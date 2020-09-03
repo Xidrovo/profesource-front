@@ -4,6 +4,8 @@ import CommentIcon from '@Icons/CommentIcon'
 import FavIcon from '@Icons/FavIcon'
 import SubComment from '@comments_f/SubComment'
 import OptionsIcon from '../../Icons/OptionsIcon'
+import axios from 'axios'
+
 
 const Comment = (props) => {
   const [open, setOpen] = useState(false)
@@ -19,6 +21,22 @@ const Comment = (props) => {
     favs: ['0', '0', '1', '2'],
     comments: ['0', '0', '0', '0'],
   }
+  const[info,setDatos]=useState([])
+  useEffect(()=>{
+    getData()
+  },[])
+
+  const getData=async ()=>{
+    const response= await axios.get('')
+    setDatos(response.data)
+  }
+  const removeData = (id_Post) => {
+
+    axios.delete(`${''}/${id_Post}`).then(res => {
+        const del = info.filter(inf => id_Post !== inf.id_Post)
+        setDatos(del)
+    })
+}
 
   return (
     <div className="md:ml-24  w-3/4 text-base h-auto ml-12 mb-10">
@@ -68,7 +86,9 @@ const Comment = (props) => {
                       <span className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Edit</span>
                     </div>
                     <div className="py-1 rounded-md bg-white shadow-xs">
-                      <span className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Delete</span>
+                      <button onClick={removeData()}>
+                        <span className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Delete</span>
+                      </button>
                     </div>
                   </div>
                 )}
