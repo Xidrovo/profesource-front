@@ -112,7 +112,7 @@ const Post = (props) => {
         </div>
       </div>
 
-      <div className="flex justify-end px-6 pt-2">
+      <div className="flex justify-end px-6 pt-2 mb-2">
         {/* <Button indicator="Publicar" onClick={()=>{alert('Publicación exitosa')}}/> */}
         <Button
           indicator="Publicar"

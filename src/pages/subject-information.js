@@ -3,6 +3,7 @@ import SEO from '@structure_f/seo'
 import Layout from '@structure_f/Layout'
 import axios from 'axios'
 import Table from '../components/Table'
+import Button from '@buttons_f/Button'
 
 const Subject_info = (props) => {
   const [subjects_array,setSubjects] = useState([])
@@ -12,15 +13,15 @@ const Subject_info = (props) => {
     axios
     .get('http://localhost:3000/api/subjects/consult')
     .then((response) => {
+      setSubjects([])
       setSubjects(response.data)
+      setSubjects([])
     })
     .catch((error) => {
       console.log(error)
     })
     setDidMount(true)
   }, [])
-
-  // const data_array = axios.get('http://localhost:3000/api/subjects/consult');
 
   const loadSubjects = () => {
     return subjects_array.map((subject, i) => {
@@ -30,37 +31,61 @@ const Subject_info = (props) => {
       document.getElementById('subjects').appendChild(option)
     })
   }
-  const data_array = [
-    {
-      name: 'Desarrollo de Aplicaciones Web',
-      science: ['Computer Science', 'Computacion', 'bla', 'bla'],
-      career: 'Computacion',
-      description: 'Computacion rules :D',
-    },
-  ]
+
+  // http://localhost:3000/api-noSQL/subjects/consult
+  const [data_array,setDatos] = useState([])
+  const [state,setState] = useState(false)
+
+  useEffect(() => {
+    axios
+    .get('http://localhost:3000/api-noSQL/subjects/consult')
+    .then((response) => {
+      setDatos(response.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    setDidMount(true)
+  }, [])
+
   const loadpay = () => {
     return data_array.map((data, i) => {
       return (
         <Table
-          name={data.name}
-          science={data.science.toString()}
-          career={data.career}
-          description={data.description}
+          name={data.Materia}
+          science={data.Ciencia.toString()}
+          career={data.Carrera}
+          description={data.Descripcion}
         />
       )
     })
   }
+
+  const [target_subject,setTargetSubject] = useState("")
+
   return (
     <Layout title={props.title}>
       <SEO title={props.title} />
       <div>
-        <div class="flex relative w-64 items-center mx-auto mb-6">
+        <div class="flex relative w-2/5 items-center mx-auto mb-6">
           <select
             id="subjects"
             class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+            onChange = {(event)=>{
+              console.log(event.target.value)
+              setTargetSubject(event.target.value)
+              setState(false)
+            }}
           >
             {didMount && loadSubjects()}
           </select>
+          <Button
+          indicator="Buscar"
+          onClick={()=>{
+            setState(!state)
+            alert(target_subject)
+          }}
+        />
         </div>
         <div>
           <div class="flex">
@@ -73,7 +98,7 @@ const Subject_info = (props) => {
                   <th class="px-4 py-2">Descripción</th>
                 </tr>
               </thead>
-              <tbody>{loadpay()}</tbody>
+              <tbody>{state && loadpay()}</tbody>
             </table>
           </div>
         </div>
