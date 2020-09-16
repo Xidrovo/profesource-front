@@ -8,6 +8,13 @@ import axios from 'axios'
 const Post = (props) => {
   const [subjects, setSubject] = useState([])
   const [didMount, setDidMount] = useState(false)
+  useEffect(() => {
+    // POST request using axios inside useEffect React hook
+    const article = { title: 'React Hooks POST Request Example' };
+    axios.post('http://localhost:3000/api/subjects/consult', article)
+        .then(response => setArticleId(response.data.id));
+      }, []);
+
 
   useEffect(()=>{
     axios
@@ -22,6 +29,9 @@ const Post = (props) => {
   },[])
 
 
+ 
+
+
   const [info, setDatos] = useState({
     id_Post:'',
     Tittle: '',
@@ -32,12 +42,14 @@ const Post = (props) => {
     created_at: '',
     updated_at: ''
   })
+  
   const removeData = (id_Post) => {
     axios.delete(`${id_Post}`).then(res => {
         const del = info.filter(inf => id_Post !== inf.id_Post)
         setDatos(del)
     })
 }
+
  
   const handleSubmit = (e) => {
     console.log("enviando")
