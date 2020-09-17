@@ -58,6 +58,7 @@ const IndexPage = () => {
   }, [])
 
   var list = [{
+    id: 1,
     username:"cxcarvaj",
     time: "20 min",
     title: "Mi primer post en profesource",
@@ -66,7 +67,7 @@ const IndexPage = () => {
     comments:"5",
     tags:["ESPOL"]
   },
-  {
+  { id:2,
     username:"fponce",
     time: "10 horas",
     title: "Problemas en DAWM",
@@ -75,8 +76,8 @@ const IndexPage = () => {
     comments:"10",
     tags:["DAWM"]
   },
-  {
-    username:"kcastro",
+  { id:3,
+    username:"keescast",
     time: "5 horas",
     title: "Duda sobre un ejercicio de estadística :(",
     desc: "Hola chicos, disculpen es que tengo una duda con un ejercico de estadística inferencial y no sé si me puedan ayudar!",
@@ -88,7 +89,7 @@ const IndexPage = () => {
 
     function presentarPosts(){
       return list.map((obj,i)=>{
-        return <PostCells username={obj.username} time={obj.time} title={obj.title} 
+        return <PostCells id={obj.id} key={obj.id} username={obj.username} time={obj.time} title={obj.title} 
         desc = {obj.desc} favs={obj.favs} comments={obj.comments} tags={obj.tags}/>
       })
     }
