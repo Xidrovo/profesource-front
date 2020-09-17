@@ -6,45 +6,34 @@ import Table from '../components/Table'
 import Button from '@buttons_f/Button'
 
 const Subject_info = (props) => {
-  const [subjects_array,setSubjects] = useState([])
+  const [subjects_array, setSubjects] = useState([])
   const [didMount, setDidMount] = useState(false)
 
   useEffect(() => {
     axios
-    .get('http://localhost:3000/api/subjects/consult')
-    .then((response) => {
-      setSubjects([])
-      setSubjects(response.data)
-      setSubjects([])
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+      .get('http://localhost:3000/api/subjects/consult')
+      .then((response) => {
+        setSubjects(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
     setDidMount(true)
   }, [])
 
-  const loadSubjects = () => {
-    return subjects_array.map((subject, i) => {
-      var option = document.createElement('option')
-      var sub = document.createTextNode(subject.Subject_name)
-      option.appendChild(sub)
-      document.getElementById('subjects').appendChild(option)
-    })
-  }
-
   // http://localhost:3000/api-noSQL/subjects/consult
-  const [data_array,setDatos] = useState([])
-  const [state,setState] = useState(false)
+  const [data_array, setDatos] = useState([])
+  const [state, setState] = useState(false)
 
   useEffect(() => {
     axios
-    .get('http://localhost:3000/api-noSQL/subjects/consult')
-    .then((response) => {
-      setDatos(response.data)
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+      .get('http://localhost:3000/api-noSQL/subjects/consult')
+      .then((response) => {
+        setDatos(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
     setDidMount(true)
   }, [])
 
@@ -61,7 +50,7 @@ const Subject_info = (props) => {
     })
   }
 
-  const [target_subject,setTargetSubject] = useState("")
+  const [target_subject, setTargetSubject] = useState('')
 
   return (
     <Layout title={props.title}>
@@ -71,21 +60,30 @@ const Subject_info = (props) => {
           <select
             id="subjects"
             class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-            onChange = {(event)=>{
+            onChange={(event) => {
               console.log(event.target.value)
               setTargetSubject(event.target.value)
               setState(false)
             }}
           >
-            {didMount && loadSubjects()}
+            {didMount && subjects_array.map((materia,index)=>{
+              return <option value={materia.Subject_name}>{materia.Subject_name}</option>
+            })}
           </select>
           <Button
-          indicator="Buscar"
-          onClick={()=>{
-            setState(!state)
-            alert(target_subject)
-          }}
-        />
+            indicator="Buscar"
+            onClick={() => {
+              setState(!state)
+              axios
+                .get(`http://localhost:3000/api-noSQL/subjects/consult/${target_subject}`)
+                .then((response) => {
+                  setDatos(response.data)
+                })
+                .catch((error) => {
+                  console.log(error)
+                })
+            }}
+          />
         </div>
         <div>
           <div class="flex">

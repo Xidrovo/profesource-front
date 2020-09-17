@@ -8,7 +8,6 @@ import PostCells from '@post_f/PostCells'
 import Post from '@post_f/Post'
 import Popular from '@post_f/PopularPost'
 import { Steps } from 'intro.js-react'
-// import 'intro.js/themes/introjs-modern.css'
 import 'intro.js/introjs.css'
 import FilterPost from '@search_f/FilterPost'
 
