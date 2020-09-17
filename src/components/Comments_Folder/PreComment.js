@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import ImageIcon from '@Icons/ImageIcon'
 import Button from '@buttons_f/Button'
 import { Link } from 'gatsby'
+import axios from 'axios'
 
 const PreComment = (props) => {
+
+
+  async function postComment (comment){
+    props.body["username"]= props.username;
+    props.body["Answer"]=comment;
+    props.body["status"]="APPROVED";
+    props.body["state"]=true;
+    props.body["id_Post"]=props.id_Post;
+    console.log(props.body)
+
+    if(comment!="") {
+      var response= await props.onPost(); 
+    if(response==null) alert("No se pudo cargar el comentario")
+    }
+    else{
+      alert("Debe ingresar texto")
+    }
+
+
+  }
+
   return (
     <div className="md:ml-24 border-solid border-2  border-gray-101 w-3/4 text-base h-auto ml-12 mb-10">
       <div className="space-x-4 mx-5 my-6 bg-transparent items-center">
@@ -44,7 +66,8 @@ const PreComment = (props) => {
           indicator="Publicar"
           onClick={() => {
             var postMessage = document.getElementById('text-area-comment').value
-            alert(postMessage)
+            console.log(typeof(postMessage))
+            postComment(postMessage);
             document.getElementById('text-area-comment').value = ''
           }}
         />

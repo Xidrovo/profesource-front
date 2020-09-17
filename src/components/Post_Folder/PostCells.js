@@ -14,7 +14,7 @@ function PostCells(props) {
   // }
 
   return (
-    <div className="md:ml-24 mb-20 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12">
+    <div className="md:ml-24 mb-20 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12" key={props.id}>
       <div className="space-x-4 mx-5 my-6 bg-transparent items-center">
         <div className="inline">
           <Link to="/profile/" className="inline-flex text-blue-102 font-bold ">
@@ -23,9 +23,16 @@ function PostCells(props) {
         </div>
         <div className="inline">
           <Link
-            to="/viewPost/"
+            to='viewPost' state={{id: props.id, username: props.username, time: props.time, title: props.title,
+            desc: props.desc, favs: props.favs, comments: props.comments, tags: props.tags, updated:false}}
             className="inline-flex text-blue-104 font-light"
-          >
+          >{/**username="cxcarvaj"
+          time="20 min"
+          title="Mi primer post en profesource"
+          desc="Hola, mi nombre es Carlos Carvajal y este es mi primer post desde profesource!"
+          favs="10"
+          comments="5"
+          tags */}
             Hace {props.time}
           </Link>
         </div>
