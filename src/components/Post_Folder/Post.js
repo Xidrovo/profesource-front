@@ -8,36 +8,45 @@ import axios from 'axios'
 const Post = (props) => {
   const [subjects, setSubject] = useState([])
   const [didMount, setDidMount] = useState(false)
-  
-  const [post, setDatos] = useState({
-    Title: '',
-    username: 'cxcarvaj',
-    Subject_name: '',
-    File:"File.pdf",
-    Punctuation:  5,
-    status: "APPROVED",
-    state:true,
-    Description: '',
-  })
-  
-  const handleSubmit = (e) => {
-    console.log("enviando")
-    axios.post('http://localhost:3000/api/posts/register',post).then((response)=>{
-      if (response.data.status === 'success'){
-        alert("Post Sent."); 
-      }else if(response.data.status === 'fail'){
-        alert("Post failed to send.")
-      }
-    })
+  const [desc, setDesc] =useState(" ")
+  const [title, setTitle]= useState(" ")
+  const [subject, setSub] = useState(" ")
+ 
+  const handleSubmit = () => {
+    publishPost()
+  }
+
+  async function publishPost(){
+    var body={
+      "Title": title,
+      "username": "cxcarvaj",
+      "Description": desc,
+      "Subject_name": subject,
+      "File":"File.pdf",
+    "Punctuation":  0,
+    "status": "APPROVED",
+    "state":true,
+    }
+
+    console.log(body)
+
+    try {
+      var response = await axios.post(`http://localhost:3000/api/posts/register`, body)
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+        })
+      return response;
+
+    } catch (e) {
+      console.log(e);
+      return null;
+    }
+
   }
  
-  const handleInputChange = (event) =>{
-    setDatos({
-      ...post,
-      [event.target.id]:event.target.value
-    })
-    console.log(post)
-  }
+  
+
   useEffect(()=>{
     axios
     .get('http://localhost:3000/api/subjects/consult')
@@ -55,14 +64,14 @@ const Post = (props) => {
     <div className="md:ml-24 border-solid border-2 border-gray-101 w-3/4 text-base h-auto ml-12 mb-8 rounded-lg"  >
       <div className="mx-6 my-4">
         <div class="box__title bg-grey-lighter px-3 py-2 border-b">
-          <input class="text-md text-grey-darker font-medium" placeholder="Titulo" id="Title" onChange={handleInputChange}></input>
+          <input class="text-md text-grey-darker font-medium" placeholder="Titulo" id="Title" onChange={e => setTitle(e.target.value)}></input>
         </div>
         <textarea
           id="Description"
           placeholder="¿Deseas postear algo?"
           class=" w-full border-2 text-grey-darkest flex-1 p-1 bg-transparent resize-none max-w-full border-l-4"
           rows="6"
-          onChange={handleInputChange}
+          onChange={e => setDesc(e.target.value)}
         ></textarea>
       </div>
 
@@ -74,7 +83,7 @@ const Post = (props) => {
               width="15px"
               color={'#52658f'}
             />
-            <select className="materia text-blue-101 font-semibold text-sm" id="Subject_name" onChange={handleInputChange}>
+            <select className="materia text-blue-101 font-semibold text-sm" id="Subject_name" onChange={e => setSub(e.target.value)}>
             {didMount && subjects.map((subject,index)=>{
               return <option value={subject.Subject_name}>{subject.Subject_name}</option>
             })}
@@ -97,7 +106,12 @@ const Post = (props) => {
         {/* <Button indicator="Publicar" onClick={()=>{alert('Publicación exitosa')}}/> */}
         <Button
           indicator="Publicar"
-          onClick={()=>{handleSubmit()}}
+          onClick={()=>{
+            let sel = document.getElementById("Subject_name").value
+            setSub(sel)
+            console.log(sel)
+            handleSubmit()
+          }}
         />
       </div>
     </div>

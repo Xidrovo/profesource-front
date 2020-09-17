@@ -10,6 +10,7 @@ import Popular from '@post_f/PopularPost'
 import { Steps } from 'intro.js-react'
 import 'intro.js/introjs.css'
 import FilterPost from '@search_f/FilterPost'
+import axios from 'axios'
 
 
 const IndexPage = () => {
@@ -24,6 +25,8 @@ const IndexPage = () => {
   const [didMount, setDidMount] = useState(false)
   const [stepsEnabled, setStepsEnabled] = useState(true)
   const [initialStep, setInicialStep] = useState(0)
+  const [posts, setPosts] =useState([])
+  const [numbercomm, setNumber]= useState([]);
   const [steps, setSteps] = useState([
     {
       element: '.profesource',
@@ -53,44 +56,49 @@ const IndexPage = () => {
       intro: 'En esta parte, encontrarás los posts existentes de la página',
     },
   ])
-  useEffect(() => {
+  useEffect(
+    async () => {
+      await
+      axios
+        .get(`http://localhost:3000/api/posts/consult`)
+        .then((response) => {
+          setPosts(response.data)
+          let comments= []
+          for(let element of response.data){
+            let id_Post=element["id_Post"];
+            axios.get(`http://localhost:3000/api/answers/consultByPost/${id_Post}`).then((result)=>{
+              console.log(result.data.length)
+              var comment = { id: id_Post, numero: result.data.length}
+              comments.push(comment);
+            })
+          }
+          
+          setNumber(comments)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    
     setDidMount(true)
   }, [])
 
-  var list = [{
-    id: 1,
-    username:"cxcarvaj",
-    time: "20 min",
-    title: "Mi primer post en profesource",
-    desc: "Hola, mi nombre es Carlos Carvajal y este es mi primer post desde profesource!",
-    favs: "10",
-    comments:"5",
-    tags:["ESPOL"]
-  },
-  { id:2,
-    username:"fponce",
-    time: "10 horas",
-    title: "Problemas en DAWM",
-    desc: "Alguien conoce lugares donde pueda aprender JS, html y CSS? Seria de gran ayuda que me compartieran esta información! Gracias",
-    favs: "5",
-    comments:"10",
-    tags:["DAWM"]
-  },
-  { id:3,
-    username:"keescast",
-    time: "5 horas",
-    title: "Duda sobre un ejercicio de estadística :(",
-    desc: "Hola chicos, disculpen es que tengo una duda con un ejercico de estadística inferencial y no sé si me puedan ayudar!",
-    favs: "12",
-    comments:"20",
-    tags:["Tarea"]
-  },
-    ]
+
+  function getNumberReplies(id){
+    for(let element of numbercomm){
+      if(element.id==id){
+        return element.numero;
+      }
+    }
+    return 0;
+  }
+
+
 
     function presentarPosts(){
-      return list.map((obj,i)=>{
-        return <PostCells id={obj.id} key={obj.id} username={obj.username} time={obj.time} title={obj.title} 
-        desc = {obj.desc} favs={obj.favs} comments={obj.comments} tags={obj.tags}/>
+      return posts.map((obj,i)=>{
+        getNumberReplies(i)
+        return <PostCells id={obj.id_Post} key={obj.id_Post} username={obj.username} time="20 minutos" title={obj.Title} 
+        desc = {obj.Description} favs={obj.Punctuation} comments={getNumberReplies(obj.id_Post)} tags={obj.Subject_name}/>
       })
     }
   return (

@@ -17,7 +17,6 @@ const PreComment = (props) => {
 
     if(comment!="") {
       var response= await props.onPost(); 
-    if(response==null) alert("No se pudo cargar el comentario")
     }
     else{
       alert("Debe ingresar texto")
@@ -47,7 +46,7 @@ const PreComment = (props) => {
         ></textarea>
       </div>
 
-      <div className="flex my-0 space-x-2 mr-6 ">
+      {/**<div className="flex my-0 space-x-2 mr-6 ">
         <div className="flex mx-6 mb-4 align-middle">
           <button className="flex items-center space-x-2 bg-transparent hover:bg-transparent focus:outline-none hover:border-transparent">
             <ImageIcon
@@ -58,9 +57,9 @@ const PreComment = (props) => {
             <span className="text-blue-101 font-semibold text-sm ">Imagen</span>
           </button>
         </div>
-      </div>
+      </div>*/}
 
-      <div className="flex justify-end px-6 pt-2">
+      <div className="flex justify-end px-6 py-2">
         {/* <Button indicator="Publicar" onClick={()=>{alert('Publicación exitosa')}}/> */}
         <Button
           indicator="Publicar"

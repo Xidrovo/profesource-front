@@ -5,7 +5,7 @@ const ButtonOption = (props) => {
   return (
     
       <button
-        className="flex text-sm border-2 border-transparent focus:outline-none transition duration-150 ease-in-out"
+        className="flex text-sm p-0 border-2 border-transparent focus:outline-none transition duration-150 ease-in-out"
         onClick={props.onClick}
       >
         <OptionsIcon 
